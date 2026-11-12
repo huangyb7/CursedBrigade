@@ -1,5 +1,7 @@
 # 咒语旅团 · THE SPELL BRIGADE
 
+> **在线试玩：** <https://huangyb7.github.io/CursedBrigade/>
+>
 > 一个可直接在浏览器里玩的竖屏 H5 肉鸽弹幕生存 Demo。
 > 暗黑童话 × 怪诞 Q 萌 × 四元素法术 × 四人小队（1 名玩家 + 3 位 AI 巫师）。
 >
@@ -9,6 +11,7 @@
 
 ## 🎮 立即开玩
 
+- **在线试玩**：<https://huangyb7.github.io/CursedBrigade/>
 - **在线源码**：<https://github.com/huangyb7/CursedBrigade>
 - 打开项目根目录的 `index.html` 即可开始。
 - 也可下载仓库根目录的 `咒语旅团_H5_Demo.zip`，解压后双击其中的 `index.html`。
