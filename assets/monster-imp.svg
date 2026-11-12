@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <title>monster-imp</title>
+  <defs>
+    <radialGradient id="mi-body" cx="36%" cy="28%" r="76%">
+      <stop offset="0" stop-color="#6a4a9a"/>
+      <stop offset=".28" stop-color="#432a6a"/>
+      <stop offset=".62" stop-color="#28163f"/>
+      <stop offset=".86" stop-color="#170c28"/>
+      <stop offset="1" stop-color="#0d0718"/>
+    </radialGradient>
+    <radialGradient id="mi-eye" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".22" stop-color="#f6ffd0"/>
+      <stop offset=".55" stop-color="#c9ff5c"/>
+      <stop offset=".82" stop-color="#6ad02f"/>
+      <stop offset="1" stop-color="#2f7a24" stop-opacity=".2"/>
+    </radialGradient>
+    <radialGradient id="mi-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#abff5c" stop-opacity=".45"/>
+      <stop offset=".6" stop-color="#6ad02f" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#2f7a24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mi-horn" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#e8d8c0"/>
+      <stop offset=".42" stop-color="#a89078"/>
+      <stop offset="1" stop-color="#4a3a34"/>
+    </linearGradient>
+    <linearGradient id="mi-wing" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#4a2a6a"/>
+      <stop offset=".55" stop-color="#2a1640"/>
+      <stop offset="1" stop-color="#120a1c"/>
+    </linearGradient>
+    <linearGradient id="mi-rim" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0" stop-color="#74e4ff" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#b45cff" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#b45cff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="mi-rough" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="5" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="mi-glowF" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="16" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="mi-b18" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="mi-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="61"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- glow aura -->
+  <circle cx="300" cy="320" r="250" fill="url(#mi-glow)"/>
+
+  <g filter="url(#mi-rough)">
+    <!-- wings -->
+    <path d="M176,290 C120,240 60,232 24,262 C58,268 80,288 92,314 C74,308 52,314 38,330 C74,336 100,352 118,378 C124,340 148,306 176,290 Z" fill="url(#mi-wing)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M424,290 C480,240 540,232 576,262 C542,268 520,288 508,314 C526,308 548,314 562,330 C526,336 500,352 482,378 C476,340 452,306 424,290 Z" fill="url(#mi-wing)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M120,268 C92,266 68,278 52,298" fill="none" stroke="#b45cff" stroke-width="5" opacity=".45" stroke-linecap="round"/>
+    <path d="M480,268 C508,266 532,278 548,298" fill="none" stroke="#74e4ff" stroke-width="5" opacity=".35" stroke-linecap="round"/>
+    <!-- tail -->
+    <path d="M300,452 C330,494 366,516 404,510 C432,504 446,480 438,458 C428,432 398,430 386,452 C398,448 410,458 408,472 C400,486 376,486 356,470 C336,454 320,440 300,434 Z" fill="#2a1640" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M420,462 C438,452 452,462 450,476 C448,488 432,494 420,486 Z" fill="#c94f4f" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+
+    <!-- body -->
+    <path d="M300,150 C400,150 466,222 466,318 C466,412 396,478 300,478 C204,478 134,412 134,318 C134,222 200,150 300,150 Z" fill="url(#mi-body)"/>
+    <path d="M300,150 C400,150 466,222 466,318 C466,412 396,478 300,478 C204,478 134,412 134,318 C134,222 200,150 300,150 Z" fill="none" stroke="#1b1220" stroke-width="13"/>
+    <!-- rim light -->
+    <path d="M430,236 C458,266 468,302 464,340 C456,410 400,462 330,476" fill="none" stroke="url(#mi-rim)" stroke-width="9" opacity=".7" stroke-linecap="round"/>
+    <path d="M170,236 C142,266 132,302 136,340" fill="none" stroke="#ffd9a0" stroke-width="8" opacity=".3" stroke-linecap="round"/>
+
+    <!-- horns -->
+    <path d="M232,166 C204,116 196,74 214,48 C226,30 254,34 258,58 C232,54 228,84 244,118 C254,140 266,158 278,170 Z" fill="url(#mi-horn)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M368,166 C396,116 404,74 386,48 C374,30 346,34 342,58 C368,54 372,84 356,118 C346,140 334,158 322,170 Z" fill="url(#mi-horn)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M240,152 C218,112 214,82 226,62" fill="none" stroke="#fff2d8" stroke-width="5" opacity=".45" stroke-linecap="round"/>
+
+    <!-- ears -->
+    <path d="M140,286 C108,262 78,266 66,290 C86,292 104,304 116,322 Z" fill="#3a2050" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M460,286 C492,262 522,266 534,290 C514,292 496,304 484,322 Z" fill="#3a2050" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+
+    <!-- eyes -->
+    <g>
+      <ellipse cx="238" cy="300" rx="60" ry="56" fill="#120a1c"/>
+      <ellipse cx="362" cy="300" rx="60" ry="56" fill="#120a1c"/>
+      <g filter="url(#mi-glowF)">
+        <ellipse cx="238" cy="302" rx="36" ry="34" fill="url(#mi-eye)"/>
+        <ellipse cx="362" cy="302" rx="36" ry="34" fill="url(#mi-eye)"/>
+      </g>
+      <ellipse cx="238" cy="302" rx="24" ry="23" fill="#f6ffd0"/>
+      <ellipse cx="362" cy="302" rx="24" ry="23" fill="#f6ffd0"/>
+      <ellipse cx="238" cy="302" rx="12" ry="14" fill="#1b1220"/>
+      <ellipse cx="362" cy="302" rx="12" ry="14" fill="#1b1220"/>
+      <circle cx="230" cy="292" r="7" fill="#ffffff"/>
+      <circle cx="354" cy="292" r="7" fill="#ffffff"/>
+      <ellipse cx="238" cy="300" rx="60" ry="56" fill="none" stroke="#1b1220" stroke-width="10"/>
+      <ellipse cx="362" cy="300" rx="60" ry="56" fill="none" stroke="#1b1220" stroke-width="10"/>
+    </g>
+
+    <!-- grin -->
+    <path d="M204,374 C246,436 354,436 396,374 C392,428 356,456 300,456 C244,456 208,428 204,374 Z" fill="#3a0a18" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M216,382 C252,424 348,424 384,382 C378,416 346,436 300,436 C254,436 222,416 216,382 Z" fill="#8a1f38"/>
+    <path d="M244,392 L266,394 L258,420 Z" fill="#fffef4" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M286,398 L310,398 L306,428 Z" fill="#fffef4" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M330,394 L352,390 L356,416 Z" fill="#fffef4" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M228,370 C258,410 342,410 372,370" fill="none" stroke="#1b1220" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- arms + claws -->
+    <path d="M150,352 C126,380 120,414 132,442 C142,464 168,468 180,452 C190,438 182,410 170,388 Z" fill="#2a1640" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <path d="M450,352 C474,380 480,414 468,442 C458,464 432,468 420,452 C410,438 418,410 430,388 Z" fill="#2a1640" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+    <g fill="#e8d8c0" stroke="#1b1220" stroke-width="6" stroke-linejoin="round">
+      <path d="M132,442 L124,466 L140,458 L146,478 L156,456 Z"/>
+      <path d="M468,442 L476,466 L460,458 L454,478 L444,456 Z"/>
+    </g>
+
+    <!-- belly patch -->
+    <ellipse cx="300" cy="404" rx="78" ry="52" fill="#3a2050" opacity=".55"/>
+    <path d="M272,372 C286,392 314,392 328,372" fill="none" stroke="#5a3a7a" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+  </g>
+
+  <!-- floating runes / sparks -->
+  <g filter="url(#mi-glowF)" opacity=".8">
+    <circle cx="120" cy="180" r="6" fill="#abff5c"/>
+    <circle cx="486" cy="168" r="5" fill="#c9f8ff"/>
+    <circle cx="66" cy="410" r="4.4" fill="#abff5c"/>
+    <circle cx="540" cy="396" r="4" fill="#b45cff"/>
+    <circle cx="300" cy="106" r="5" fill="#ffe9a8"/>
+  </g>
+
+  <!-- ground glow -->
+  <ellipse cx="300" cy="540" rx="180" ry="42" fill="#abff5c" opacity=".14" filter="url(#mi-b18)"/>
+
+  <!-- grain -->
+  <g clip-path="url(#mi-clip)" style="mix-blend-mode:overlay" opacity=".12">
+    <rect width="600" height="600" filter="url(#mi-grain)"/>
+  </g>
+  <clipPath id="mi-clip">
+    <path d="M300,150 C400,150 466,222 466,318 C466,412 396,478 300,478 C204,478 134,412 134,318 C134,222 200,150 300,150 Z"/>
+    <path d="M232,166 C204,116 196,74 214,48 C226,30 254,34 258,58 C232,54 228,84 244,118 C254,140 266,158 278,170 Z"/>
+    <path d="M368,166 C396,116 404,74 386,48 C374,30 346,34 342,58 C368,54 372,84 356,118 C346,140 334,158 322,170 Z"/>
+    <ellipse cx="238" cy="300" rx="60" ry="56"/>
+    <ellipse cx="362" cy="300" rx="60" ry="56"/>
+  </clipPath>
+</svg>

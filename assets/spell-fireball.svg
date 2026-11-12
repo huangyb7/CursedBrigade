@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>spell-fireball</title>
+  <defs>
+    <radialGradient id="sf-head" cx="34%" cy="30%" r="72%">
+      <stop offset="0" stop-color="#fffef4"/>
+      <stop offset=".24" stop-color="#ffe9a0"/>
+      <stop offset=".55" stop-color="#ffb143"/>
+      <stop offset=".82" stop-color="#ff6b3d"/>
+      <stop offset="1" stop-color="#b81f36"/>
+    </radialGradient>
+    <linearGradient id="sf-tail" x1="90%" y1="10%" x2="10%" y2="96%">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset=".3" stop-color="#ff8a3d"/>
+      <stop offset=".68" stop-color="#e8392c"/>
+      <stop offset="1" stop-color="#8d1530"/>
+    </linearGradient>
+    <filter id="sf-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="31" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sf-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#sf-glow)" opacity=".5">
+    <circle cx="82" cy="46" r="32" fill="#ff8a3d"/>
+    <circle cx="36" cy="90" r="18" fill="#ff6b3d" opacity=".7"/>
+  </g>
+  <g filter="url(#sf-rough)">
+    <!-- trailing flames -->
+    <path d="M44,64 C30,62 16,72 14,88 C12,102 22,114 38,114 C32,104 32,92 40,82 C34,84 28,78 30,70 C32,64 38,62 44,64 Z" fill="url(#sf-tail)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M56,38 C42,40 30,52 30,66 C30,78 38,88 50,90 C46,80 48,68 56,60 C50,58 46,52 48,46 C50,40 54,38 56,38 Z" fill="url(#sf-tail)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round" opacity=".95"/>
+    <path d="M46,86 C40,92 38,100 42,108 C46,114 54,116 60,112 C54,106 52,98 56,90 Z" fill="#ffb143" stroke="#1b1220" stroke-width="5" stroke-linejoin="round"/>
+    <!-- fireball head -->
+    <circle cx="84" cy="46" r="32" fill="url(#sf-head)" stroke="#1b1220" stroke-width="7"/>
+    <circle cx="76" cy="38" r="12" fill="#fffef4" opacity=".9"/>
+    <path d="M64,74 C56,64 56,48 64,38" fill="none" stroke="#fff4d8" stroke-width="5" opacity=".6" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffd166">
+    <circle cx="116" cy="26" r="4.4"/>
+    <circle cx="108" cy="82" r="3.2"/>
+    <circle cx="22" cy="40" r="2.8"/>
+    <circle cx="104" cy="18" r="2.4"/>
+  </g>
+</svg>

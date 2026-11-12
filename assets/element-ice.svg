@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>element-ice</title>
+  <defs>
+    <linearGradient id="ei-crys" x1="24%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".26" stop-color="#d7fbff"/>
+      <stop offset=".58" stop-color="#74e4ff"/>
+      <stop offset=".82" stop-color="#3fa8e8"/>
+      <stop offset="1" stop-color="#2a5fc0"/>
+    </linearGradient>
+    <linearGradient id="ei-shard" x1="30%" y1="0%" x2="76%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#b8f2ff"/>
+      <stop offset="1" stop-color="#4b8dff"/>
+    </linearGradient>
+    <filter id="ei-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ei-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#ei-glow)" opacity=".55">
+    <path d="M64,6 L94,40 L88,92 L64,118 L36,90 L32,40 Z" fill="#74e4ff"/>
+  </g>
+  <g filter="url(#ei-rough)">
+    <!-- side shards -->
+    <path d="M20,44 L34,36 L38,62 L26,70 Z" fill="url(#ei-shard)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M108,42 L94,34 L90,60 L102,68 Z" fill="url(#ei-shard)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round"/>
+    <!-- main crystal -->
+    <path d="M64,4 L96,38 L90,94 L64,122 L38,92 L32,38 Z" fill="url(#ei-crys)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M64,20 L64,104" stroke="#ffffff" stroke-width="4" opacity=".8"/>
+    <path d="M64,4 L96,38 L64,52 L32,38 Z" fill="#ffffff" opacity=".45"/>
+    <path d="M64,52 L90,94 L64,104 L38,92 Z" fill="#2a4fa8" opacity=".28"/>
+    <path d="M64,52 L64,104" stroke="#ffffff" stroke-width="3" opacity=".55"/>
+    <path d="M64,52 L90,94 M64,52 L38,92" stroke="#ffffff" stroke-width="3" opacity=".45"/>
+    <path d="M46,50 L52,34" fill="none" stroke="#ffffff" stroke-width="5" opacity=".85" stroke-linecap="round"/>
+    <path d="M76,92 L82,76" fill="none" stroke="#d7fbff" stroke-width="4" opacity=".45" stroke-linecap="round"/>
+  </g>
+  <g fill="#d7fbff">
+    <path d="M104,86 l2.6,6 6,2.6 -6,2.6 -2.6,6 -2.6,-6 -6,-2.6 6,-2.6 Z"/>
+    <path d="M22,90 l2,4.6 4.6,2 -4.6,2 -2,4.6 -2,-4.6 -4.6,-2 4.6,-2 Z" opacity=".8"/>
+  </g>
+</svg>

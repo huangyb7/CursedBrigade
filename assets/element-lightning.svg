@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>element-lightning</title>
+  <defs>
+    <linearGradient id="el-bolt" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".24" stop-color="#fffbd0"/>
+      <stop offset=".55" stop-color="#ffe14d"/>
+      <stop offset=".82" stop-color="#ffb100"/>
+      <stop offset="1" stop-color="#ff7a00"/>
+    </linearGradient>
+    <filter id="el-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="19" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="el-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#el-glow)" opacity=".6">
+    <path d="M72,4 L30,70 L56,70 L46,124 L100,54 L72,54 Z" fill="#ffe14d"/>
+  </g>
+  <g filter="url(#el-rough)">
+    <path d="M72,4 L30,70 L56,70 L46,124 L100,54 L72,54 Z" fill="url(#el-bolt)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M68,16 L44,58 L60,58 L56,86" fill="none" stroke="#ffffff" stroke-width="5" opacity=".8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M76,62 L88,62" stroke="#fffbd0" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffe14d" filter="url(#el-glow)">
+    <path d="M104,24 l6,8 -8,6 -6,-8 Z" opacity=".9"/>
+    <path d="M20,88 l5,7 -7,5 -5,-7 Z" opacity=".8"/>
+    <circle cx="106" cy="98" r="3.4"/>
+  </g>
+</svg>

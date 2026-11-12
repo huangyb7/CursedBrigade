@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>element-fire</title>
+  <defs>
+    <linearGradient id="ef-flame" x1="26%" y1="100%" x2="76%" y2="0%">
+      <stop offset="0" stop-color="#a8182c"/>
+      <stop offset=".18" stop-color="#e8392c"/>
+      <stop offset=".42" stop-color="#ff6b3d"/>
+      <stop offset=".66" stop-color="#ffb143"/>
+      <stop offset=".85" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#fff4d8"/>
+    </linearGradient>
+    <radialGradient id="ef-core" cx="50%" cy="66%" r="54%">
+      <stop offset="0" stop-color="#fffef4"/>
+      <stop offset=".38" stop-color="#ffe9a8"/>
+      <stop offset=".72" stop-color="#ffb143"/>
+      <stop offset="1" stop-color="#ff6b3d" stop-opacity=".4"/>
+    </radialGradient>
+    <filter id="ef-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="ef-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#ef-glow)" opacity=".55">
+    <path d="M64,4 C70,26 86,38 92,56 C100,78 88,108 64,112 C40,116 22,96 27,74 C30,58 44,50 46,32 C52,48 60,54 64,46 C68,38 60,22 64,4 Z" fill="#ff6b3d"/>
+  </g>
+  <g filter="url(#ef-rough)">
+    <path d="M64,4 C70,26 86,38 92,56 C100,78 88,108 64,112 C40,116 22,96 27,74 C30,58 44,50 46,32 C52,48 60,54 64,46 C68,38 60,22 64,4 Z" fill="url(#ef-flame)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M64,48 C74,62 82,72 82,84 C82,98 74,106 64,106 C54,106 46,98 46,84 C46,70 56,62 62,50 Z" fill="url(#ef-core)"/>
+    <path d="M64,66 C70,76 75,81 75,88 C75,95 70,99 64,99 C58,99 53,95 53,88 C53,81 59,75 64,66 Z" fill="#fffef4" opacity=".85"/>
+    <path d="M48,44 C42,56 40,68 42,80" fill="none" stroke="#ffe9a8" stroke-width="5" opacity=".55" stroke-linecap="round"/>
+    <path d="M64,22 C58,36 56,46 58,54" fill="none" stroke="#ffd166" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffd166">
+    <circle cx="100" cy="40" r="4.4"/>
+    <circle cx="26" cy="56" r="3.4"/>
+    <circle cx="94" cy="22" r="2.6"/>
+  </g>
+</svg>

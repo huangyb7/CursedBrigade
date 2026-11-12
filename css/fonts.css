@@ -1,0 +1,69 @@
+/* ============================================================
+   咒语旅团 — 本地字体 & 全局设计令牌
+   由 Lead 提供，UI 可引用变量，不要覆盖字体文件。
+   ============================================================ */
+
+@font-face {
+  font-family: 'ZCOOL KuaiLe';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../assets/fonts/zcool-kuaile.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Cinzel Decorative';
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+  src: url('../assets/fonts/cinzel-decorative-bold.ttf') format('truetype');
+}
+
+:root {
+  /* palette */
+  --ink: #1b1220;
+  --ink-soft: #2b1933;
+  --night: #140f24;
+  --night-2: #1d1633;
+  --plum: #3a1f4f;
+  --plum-2: #5b2d69;
+  --moss: #1d4536;
+  --moss-2: #2f6b4d;
+  --cream: #fff4d8;
+  --cream-dim: #e8d9bb;
+  --gold: #ffd166;
+  --gold-2: #ffb02e;
+  --fire: #ff6b3d;
+  --ice: #74e4ff;
+  --thunder: #ffe14d;
+  --acid: #abff5c;
+  --rose: #ff5d8f;
+
+  /* fonts */
+  --font-display: 'ZCOOL KuaiLe', 'YouYuan', 'Microsoft YaHei', sans-serif;
+  --font-fantasy: 'Cinzel Decorative', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Nunito', 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+
+  /* type scale */
+  --fs-display: clamp(42px, 12vw, 64px);
+  --fs-title: clamp(26px, 7vw, 36px);
+  --fs-sub: clamp(16px, 4.2vw, 19px);
+  --fs-body: clamp(13px, 3.5vw, 15px);
+  --fs-small: clamp(11px, 3vw, 12px);
+
+  /* shape & depth */
+  --r-card: 22px;
+  --r-pill: 999px;
+  --r-panel: 28px;
+  --border-ink: 3px solid var(--ink);
+  --shadow-ink: 0 4px 0 var(--ink);
+  --glow-gold: 0 0 24px rgba(255, 209, 102, .45);
+
+  /* layers */
+  --z-bg: 0;
+  --z-scene: 1;
+  --z-ui: 10;
+  --z-hud: 20;
+  --z-modal: 50;
+  --z-toast: 80;
+}

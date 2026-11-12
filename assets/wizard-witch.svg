@@ -1,0 +1,428 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <title>wizard-witch</title>
+  <defs>
+    <radialGradient id="wx-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#e2ffad" stop-opacity=".48"/>
+      <stop offset=".32" stop-color="#abff5c" stop-opacity=".28"/>
+      <stop offset=".64" stop-color="#4f9a2e" stop-opacity=".16"/>
+      <stop offset=".86" stop-color="#1d4536" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#12281c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wx-hat" x1="16%" y1="0%" x2="84%" y2="100%">
+      <stop offset="0" stop-color="#6a3f8a"/>
+      <stop offset=".22" stop-color="#4a2160"/>
+      <stop offset=".54" stop-color="#331444"/>
+      <stop offset=".80" stop-color="#220d2e"/>
+      <stop offset="1" stop-color="#160818"/>
+    </linearGradient>
+    <linearGradient id="wx-robe" x1="14%" y1="0%" x2="86%" y2="100%">
+      <stop offset="0" stop-color="#3d7a4a"/>
+      <stop offset=".24" stop-color="#2a5b3a"/>
+      <stop offset=".58" stop-color="#1d4536"/>
+      <stop offset=".82" stop-color="#142f26"/>
+      <stop offset="1" stop-color="#0c1d18"/>
+    </linearGradient>
+    <linearGradient id="wx-robeB" x1="86%" y1="0%" x2="14%" y2="100%">
+      <stop offset="0" stop-color="#5a3a7a"/>
+      <stop offset=".32" stop-color="#40254f"/>
+      <stop offset=".68" stop-color="#2a1636"/>
+      <stop offset="1" stop-color="#180c20"/>
+    </linearGradient>
+    <linearGradient id="wx-skin" x1="24%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#d8e8a8"/>
+      <stop offset=".34" stop-color="#b3cc85"/>
+      <stop offset=".70" stop-color="#87a860"/>
+      <stop offset="1" stop-color="#5c7a42"/>
+    </linearGradient>
+    <radialGradient id="wx-acid" cx="46%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".24" stop-color="#e2ffad" stop-opacity=".9"/>
+      <stop offset=".56" stop-color="#abff5c" stop-opacity=".85"/>
+      <stop offset=".82" stop-color="#5fc23a" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#2f7a24" stop-opacity=".7"/>
+    </radialGradient>
+    <linearGradient id="wx-glass" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+      <stop offset=".4" stop-color="#d8fbff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#74c8e0" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="wx-hair" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffd08a"/>
+      <stop offset=".32" stop-color="#ff9a3d"/>
+      <stop offset=".7" stop-color="#c95f1e"/>
+      <stop offset="1" stop-color="#8a3a12"/>
+    </linearGradient>
+    <linearGradient id="wx-leather" x1="18%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0" stop-color="#a8713f"/>
+      <stop offset=".35" stop-color="#7a4a2a"/>
+      <stop offset=".72" stop-color="#4e2c16"/>
+      <stop offset="1" stop-color="#2e180a"/>
+    </linearGradient>
+    <linearGradient id="wx-rim" x1="10%" y1="100%" x2="100%" y2="8%">
+      <stop offset=".28" stop-color="#74e4ff" stop-opacity="0"/>
+      <stop offset=".58" stop-color="#b49bff" stop-opacity=".4"/>
+      <stop offset=".82" stop-color="#e0f8ff" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#f2ffff" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="wx-key" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#fffbe8" stop-opacity=".95"/>
+      <stop offset=".3" stop-color="#d8ffa8" stop-opacity=".5"/>
+      <stop offset=".66" stop-color="#9ae06a" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#6ac04a" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="wx-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#0a1410" stop-opacity=".68"/>
+      <stop offset=".55" stop-color="#0a1410" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#0a1410" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wx-shade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset=".26" stop-color="#07120e" stop-opacity="0"/>
+      <stop offset=".66" stop-color="#07120e" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#07120e" stop-opacity=".48"/>
+    </linearGradient>
+    <linearGradient id="wx-veil" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#0c1d18" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0c1d18" stop-opacity=".5"/>
+    </linearGradient>
+
+    <filter id="wx-paint" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022 0.03" numOctaves="3" seed="53" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wx-paintS" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.036" numOctaves="3" seed="19" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wx-b3" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="wx-b6" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="wx-b14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="wx-b28" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="wx-glow" x="-140%" y="-140%" width="380%" height="380%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wx-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="61"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="wx-canvas" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.42" numOctaves="2" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="wx-mottle" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0055" numOctaves="3" seed="37"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+
+    <clipPath id="wx-clip-robe">
+      <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z"/>
+    </clipPath>
+    <clipPath id="wx-clip-head">
+      <path d="M450,366 C540,366 594,432 594,512 C594,600 538,672 450,672 C362,672 306,600 306,512 C306,432 360,366 450,366 Z"/>
+    </clipPath>
+    <clipPath id="wx-clip-hat">
+      <path d="M450,412 C556,412 622,398 664,376 C600,360 528,354 450,354 C372,354 300,360 236,376 C278,398 344,412 450,412 Z"/>
+    </clipPath>
+    <clipPath id="wx-clip-figure">
+      <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z"/>
+      <path d="M450,366 C540,366 594,432 594,512 C594,600 538,672 450,672 C362,672 306,600 306,512 C306,432 360,366 450,366 Z"/>
+      <path d="M450,412 C556,412 622,398 664,376 C600,360 528,354 450,354 C372,354 300,360 236,376 C278,398 344,412 450,412 Z"/>
+      <ellipse cx="260" cy="740" rx="76" ry="96"/>
+      <ellipse cx="644" cy="740" rx="76" ry="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- ATMOSPHERE -->
+  <g>
+    <ellipse cx="452" cy="600" rx="368" ry="386" fill="url(#wx-halo)"/>
+    <g opacity=".28" filter="url(#wx-paintS)">
+      <circle cx="452" cy="560" r="316" fill="none" stroke="#abff5c" stroke-width="2.4" stroke-dasharray="26 32"/>
+      <circle cx="452" cy="560" r="352" fill="none" stroke="#7ae04a" stroke-width="1.6" stroke-dasharray="6 36"/>
+    </g>
+  </g>
+
+  <!-- BACK : acid mist -->
+  <g>
+    <ellipse cx="236" cy="680" rx="100" ry="150" fill="#7ae04a" opacity=".26" filter="url(#wx-b28)" transform="rotate(-14 236 680)"/>
+    <ellipse cx="668" cy="664" rx="94" ry="146" fill="#abff5c" opacity=".22" filter="url(#wx-b28)" transform="rotate(12 668 664)"/>
+    <g filter="url(#wx-paintS)" opacity=".85">
+      <path d="M186,700 C170,660 186,614 224,596 C212,632 224,662 250,684 C232,712 204,716 186,700 Z" fill="url(#wx-acid)" opacity=".7"/>
+      <path d="M714,688 C732,650 716,606 678,590 C690,626 678,656 652,678 C670,706 698,708 714,688 Z" fill="url(#wx-acid)" opacity=".62"/>
+      <path d="M266,540 C250,506 268,470 304,458 C294,488 304,512 326,530 C310,552 284,556 266,540 Z" fill="url(#wx-acid)" opacity=".5"/>
+      <path d="M628,528 C646,494 628,458 592,446 C602,476 592,500 570,518 C586,540 612,544 628,528 Z" fill="url(#wx-acid)" opacity=".45"/>
+    </g>
+    <g filter="url(#wx-glow)">
+      <circle cx="214" cy="600" r="6" fill="#e2ffad"/>
+      <circle cx="742" cy="580" r="5" fill="#e2ffad"/>
+      <circle cx="158" cy="742" r="4.4" fill="#abff5c"/>
+      <circle cx="790" cy="720" r="4" fill="#abff5c"/>
+      <circle cx="292" cy="496" r="3.6" fill="#ffffff"/>
+      <circle cx="618" cy="486" r="3.2" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- CONTACT SHADOW -->
+  <ellipse cx="454" cy="1122" rx="268" ry="54" fill="url(#wx-shadow)"/>
+  <ellipse cx="454" cy="1114" rx="184" ry="30" fill="#0a1410" opacity=".32" filter="url(#wx-b14)"/>
+
+  <!-- FIGURE -->
+  <g filter="url(#wx-paint)">
+    <!-- boots -->
+    <g>
+      <path d="M344,1018 C312,1028 296,1054 302,1082 C308,1108 342,1120 374,1112 C400,1104 414,1084 408,1060 C402,1036 376,1012 344,1018 Z" fill="url(#wx-leather)"/>
+      <path d="M408,1060 C430,1046 436,1020 420,1004 C410,994 394,996 388,1006 C402,1014 406,1034 390,1048 Z" fill="url(#wx-leather)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M344,1018 C312,1028 296,1054 302,1082 C308,1108 342,1120 374,1112 C400,1104 414,1084 408,1060 C402,1036 376,1012 344,1018 Z" fill="none" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M330,1042 C320,1060 326,1084 346,1094" fill="none" stroke="#ffd08a" stroke-width="6" opacity=".35" stroke-linecap="round"/>
+      <path d="M556,1018 C588,1018 612,1034 610,1060 C608,1088 576,1104 544,1102 C514,1100 496,1082 496,1058 C496,1032 524,1014 556,1018 Z" fill="url(#wx-leather)"/>
+      <path d="M496,1058 C474,1044 468,1018 484,1002 C494,992 510,994 516,1004 C502,1012 498,1032 514,1046 Z" fill="url(#wx-leather)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M556,1018 C588,1018 612,1034 610,1060 C608,1088 576,1104 544,1102 C514,1100 496,1082 496,1058 C496,1032 524,1014 556,1018 Z" fill="none" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M570,1034 C582,1048 584,1068 574,1082" fill="none" stroke="#b49bff" stroke-width="5" opacity=".4" stroke-linecap="round"/>
+    </g>
+
+    <!-- robe -->
+    <g>
+      <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z" fill="url(#wx-robe)"/>
+      <g clip-path="url(#wx-clip-robe)">
+        <!-- purple panel -->
+        <path d="M470,600 L520,648 L462,700 L524,752 L458,806 L522,858 L460,910 L526,962 L526,1010 L660,1010 L660,600 Z" fill="url(#wx-robeB)"/>
+        <path d="M470,600 L520,648 L462,700 L524,752 L458,806 L522,858 L460,910 L526,962" fill="none" stroke="#1b1220" stroke-width="7" opacity=".45" stroke-linejoin="round"/>
+        <!-- colour masses -->
+        <g filter="url(#wx-paintS)">
+          <path d="M318,672 C298,744 304,818 294,890 C320,818 338,744 352,678 Z" fill="#d8ffa8" opacity=".30"/>
+          <path d="M598,700 C586,780 590,858 604,922 C580,858 566,780 572,712 Z" fill="#2a1636" opacity=".45"/>
+          <path d="M340,780 C380,812 438,824 492,812 C468,852 414,868 374,852 C346,840 336,806 340,780 Z" fill="#abff5c" opacity=".12"/>
+          <path d="M470,896 C512,912 556,912 596,900 C570,928 520,940 484,932 C468,928 466,910 470,896 Z" fill="#b49bff" opacity=".18"/>
+          <!-- fold shapes -->
+          <path d="M352,640 C340,720 346,800 334,880 C326,800 324,720 330,644 Z" fill="#0a1c16" opacity=".40"/>
+          <path d="M556,648 C570,728 566,808 578,880 C590,808 584,726 578,652 Z" fill="#0a1c16" opacity=".35"/>
+        </g>
+        <!-- patches + stitches -->
+        <g transform="translate(352 800) rotate(-9)">
+          <rect x="-42" y="-36" width="84" height="72" rx="6" fill="#8d5a2c" stroke="#1b1220" stroke-width="8"/>
+          <rect x="-42" y="-36" width="84" height="72" rx="6" fill="#d8ffa8" opacity=".12"/>
+          <path d="M-32,-24 L-22,-24 M-32,-24 L-32,-14 M32,-24 L22,-24 M32,-24 L32,-14 M-32,24 L-22,24 M-32,24 L-32,14 M32,24 L22,24 M32,24 L32,14" stroke="#ffd08a" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+        </g>
+        <g transform="translate(540 700) rotate(7)">
+          <rect x="-34" y="-30" width="68" height="60" rx="6" fill="#3d7a4a" stroke="#1b1220" stroke-width="8"/>
+          <path d="M-24,-18 L-16,-18 M-24,-18 L-24,-10 M24,-18 L16,-18 M24,-18 L24,-10 M-24,18 L-16,18 M-24,18 L-24,10 M24,18 L16,18 M24,18 L24,10" stroke="#e2ffad" stroke-width="3.6" stroke-linecap="round" opacity=".8"/>
+        </g>
+        <!-- shading -->
+        <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z" fill="url(#wx-shade)"/>
+        <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z" fill="url(#wx-veil)"/>
+        <path d="M498,610 C560,624 592,660 600,718 C612,794 600,864 610,924 C614,958 596,982 562,992 L560,972 C588,960 594,938 590,912 C580,848 590,788 578,718 C568,666 536,634 494,622 Z" fill="#b49bff" opacity=".18" filter="url(#wx-b6)"/>
+        <path d="M336,612 C310,630 296,664 290,706 C278,776 290,846 276,904" fill="none" stroke="#e2ffad" stroke-width="8" opacity=".28" filter="url(#wx-b3)" stroke-linecap="round"/>
+      </g>
+      <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922 C290,962 318,992 372,996 L528,996 C582,992 610,962 604,922 C594,860 606,788 594,714 C582,644 524,610 450,608 Z" fill="none" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M450,608 C376,610 318,644 306,714 C294,788 306,860 296,922" fill="none" stroke="url(#wx-key)" stroke-width="8" opacity=".65" stroke-linecap="round"/>
+      <path d="M450,608 C524,610 582,644 594,714 C606,788 594,860 604,922" fill="none" stroke="url(#wx-rim)" stroke-width="6" opacity=".45" stroke-linecap="round"/>
+
+      <!-- belt with vials -->
+      <g>
+        <path d="M296,900 C352,922 548,922 604,900 L604,936 C548,958 352,958 296,936 Z" fill="#2e180a"/>
+        <path d="M296,900 C352,922 548,922 604,900" fill="none" stroke="#a8713f" stroke-width="5" opacity=".9"/>
+        <path d="M296,900 C352,922 548,922 604,900 L604,936 C548,958 352,958 296,936 Z" fill="none" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+        <rect x="418" y="898" width="64" height="40" rx="8" fill="#a8713f" stroke="#1b1220" stroke-width="8"/>
+        <path d="M438,918 L462,918" stroke="#1b1220" stroke-width="6" stroke-linecap="round"/>
+        <!-- hanging vials -->
+        <g>
+          <path d="M332,952 L332,978" stroke="#1b1220" stroke-width="4"/>
+          <path d="M320,978 L344,978 L348,1014 C348,1028 334,1036 320,1032 C310,1028 308,1018 312,1006 Z" fill="url(#wx-glass)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M322,1004 L346,1004 L348,1014 C348,1028 334,1036 320,1032 C310,1028 308,1018 312,1006 Z" fill="url(#wx-acid)"/>
+          <circle cx="326" cy="992" r="4" fill="#e2ffad" opacity=".8"/>
+        </g>
+        <g>
+          <path d="M570,952 L570,972" stroke="#1b1220" stroke-width="4"/>
+          <path d="M560,972 L580,972 L584,1002 C584,1014 570,1020 560,1016 C552,1012 550,1004 554,994 Z" fill="url(#wx-glass)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+          <path d="M562,996 L582,996 L584,1002 C584,1014 570,1020 560,1016 C552,1012 550,1004 554,994 Z" fill="url(#wx-acid)"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- arms -->
+    <g>
+      <!-- left arm raised with flask -->
+      <path d="M330,640 C298,656 278,690 276,730 C274,764 288,790 310,798 C330,806 348,792 352,772 C356,746 350,714 344,686 C340,666 338,650 330,640 Z" fill="url(#wx-robe)" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M300,664 C286,692 282,724 288,752" fill="none" stroke="#d8ffa8" stroke-width="7" opacity=".35" stroke-linecap="round"/>
+      <path d="M306,790 C322,780 334,762 338,742" fill="none" stroke="#1b1220" stroke-width="9" opacity=".5" stroke-linecap="round"/>
+      <!-- claw hand -->
+      <path d="M274,690 C258,676 244,684 244,700 C244,714 256,724 270,722 C262,732 268,744 282,744 C292,744 298,734 296,724 C304,728 312,722 312,712 C312,700 302,692 292,694 Z" fill="url(#wx-skin)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+      <!-- bubbling flask -->
+      <g filter="url(#wx-paintS)">
+        <path d="M300,596 C316,596 318,608 310,614 L310,626 L292,626 L292,614 C284,608 286,596 300,596 Z" fill="url(#wx-glass)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M270,676 C270,644 286,626 300,626 C314,626 330,644 330,676 C330,700 316,714 300,714 C284,714 270,700 270,676 Z" fill="url(#wx-glass)" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M274,676 C274,650 288,634 300,634 C312,634 326,650 326,676 C326,698 314,708 300,708 C286,708 274,698 274,676 Z" fill="url(#wx-acid)"/>
+        <circle cx="288" cy="686" r="7" fill="#ffffff" opacity=".75"/>
+        <circle cx="310" cy="698" r="5" fill="#ffffff" opacity=".6"/>
+        <circle cx="302" cy="668" r="4" fill="#e2ffad" opacity=".9"/>
+        <!-- bubbles above -->
+        <g filter="url(#wx-glow)">
+          <circle cx="286" cy="592" r="9" fill="#e2ffad" opacity=".85"/>
+          <circle cx="316" cy="576" r="6" fill="#abff5c" opacity=".8"/>
+          <circle cx="300" cy="556" r="4.4" fill="#ffffff" opacity=".8"/>
+          <circle cx="330" cy="604" r="4" fill="#e2ffad" opacity=".7"/>
+        </g>
+      </g>
+      <!-- right arm with wand -->
+      <path d="M572,642 C608,652 636,680 648,716 C656,742 648,766 630,776 C612,786 592,776 584,756 C576,732 570,700 566,674 C562,656 566,646 572,642 Z" fill="url(#wx-robeB)" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M636,700 C648,724 650,748 640,766" fill="none" stroke="url(#wx-rim)" stroke-width="6" opacity=".5" stroke-linecap="round"/>
+      <path d="M600,690 C618,682 632,690 640,704" fill="none" stroke="#b49bff" stroke-width="5" opacity=".4" stroke-linecap="round"/>
+      <!-- wand hand -->
+      <path d="M616,780 C632,768 650,776 652,792 C654,806 642,818 626,818 C618,828 604,824 600,812 C592,806 590,794 598,786 C602,780 610,778 616,780 Z" fill="url(#wx-skin)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+      <!-- gnarled wand -->
+      <path d="M654,806 C672,760 668,700 690,650 C698,630 708,614 716,600 L730,608 C718,626 708,646 700,668 C686,712 694,760 676,808 Z" fill="url(#wx-leather)" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M690,650 C680,690 680,730 672,766" fill="none" stroke="#c98a4a" stroke-width="4" opacity=".55" stroke-linecap="round"/>
+      <!-- acid bulb on wand -->
+      <g filter="url(#wx-glow)" opacity=".95">
+        <circle cx="726" cy="580" r="38" fill="url(#wx-acid)"/>
+      </g>
+      <circle cx="726" cy="580" r="30" fill="none" stroke="#1b1220" stroke-width="8"/>
+      <ellipse cx="714" cy="566" rx="12" ry="9" fill="#ffffff" opacity=".7"/>
+      <g filter="url(#wx-glow)">
+        <circle cx="762" cy="536" r="5.4" fill="#e2ffad"/>
+        <circle cx="700" cy="524" r="4.2" fill="#ffffff"/>
+        <circle cx="776" cy="600" r="3.6" fill="#abff5c"/>
+      </g>
+    </g>
+
+    <!-- head -->
+    <g>
+      <!-- wild hair behind -->
+      <path d="M318,470 C292,470 274,452 272,428 C284,446 306,452 324,444 C310,458 300,478 306,494 C314,482 326,476 338,478 Z" fill="url(#wx-hair)" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M582,470 C608,470 626,452 628,428 C616,446 594,452 576,444 C590,458 600,478 594,494 C586,482 574,476 562,478 Z" fill="url(#wx-hair)" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M330,430 C312,406 316,376 338,364 C332,388 338,410 356,424 Z" fill="url(#wx-hair)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M570,430 C588,406 584,376 562,364 C568,388 562,410 544,424 Z" fill="url(#wx-hair)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <!-- head -->
+      <path d="M450,366 C540,366 594,432 594,512 C594,600 538,672 450,672 C362,672 306,600 306,512 C306,432 360,366 450,366 Z" fill="url(#wx-skin)"/>
+      <g clip-path="url(#wx-clip-head)">
+        <ellipse cx="576" cy="580" rx="106" ry="98" fill="#3f5a2a" opacity=".40" filter="url(#wx-b28)"/>
+        <ellipse cx="336" cy="424" rx="90" ry="62" fill="#f2ffd0" opacity=".55" filter="url(#wx-b28)"/>
+        <ellipse cx="380" cy="620" rx="94" ry="48" fill="#3f5a2a" opacity=".30" filter="url(#wx-b14)"/>
+        <g filter="url(#wx-paintS)">
+          <path d="M318,500 C310,548 322,592 348,622 C324,600 316,556 322,514 Z" fill="#e2ffad" opacity=".35"/>
+          <path d="M590,496 C584,548 568,590 540,618 C568,586 578,542 574,498 Z" fill="#2f4a20" opacity=".30"/>
+        </g>
+        <!-- brows -->
+        <path d="M338,478 C366,454 410,452 432,470 C404,462 366,466 344,486 Z" fill="#8a3a12"/>
+        <path d="M562,478 C534,454 490,452 468,470 C496,462 534,466 556,486 Z" fill="#8a3a12"/>
+        <!-- big asymmetric eyes -->
+        <ellipse cx="392" cy="516" rx="52" ry="46" fill="#fffef4"/>
+        <ellipse cx="500" cy="520" rx="40" ry="36" fill="#fffef4"/>
+        <ellipse cx="392" cy="516" rx="52" ry="46" fill="none" stroke="#1b1220" stroke-width="8"/>
+        <ellipse cx="500" cy="520" rx="40" ry="36" fill="none" stroke="#1b1220" stroke-width="8"/>
+        <circle cx="398" cy="520" r="20" fill="#8ce04a"/>
+        <circle cx="398" cy="520" r="11" fill="#2f7a24"/>
+        <circle cx="394" cy="514" r="6" fill="#ffffff"/>
+        <circle cx="504" cy="524" r="16" fill="#8ce04a"/>
+        <circle cx="504" cy="524" r="9" fill="#2f7a24"/>
+        <circle cx="500" cy="519" r="5" fill="#ffffff"/>
+        <!-- monocle over right eye -->
+        <circle cx="500" cy="520" r="46" fill="none" stroke="url(#wx-glass)" stroke-width="9"/>
+        <circle cx="500" cy="520" r="46" fill="none" stroke="#1b1220" stroke-width="3.4"/>
+        <path d="M500,534 L516,546" stroke="#1b1220" stroke-width="4"/>
+        <path d="M476,492 C488,482 506,480 518,486" fill="none" stroke="#ffffff" stroke-width="4" opacity=".7" stroke-linecap="round"/>
+        <!-- huge hooked nose -->
+        <path d="M432,520 C424,556 420,592 436,614 C452,634 480,628 490,606 C474,612 458,606 452,588 C446,566 448,540 452,520 Z" fill="url(#wx-skin)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+        <path d="M438,534 C434,562 432,588 442,604" fill="none" stroke="#f2ffd0" stroke-width="5" opacity=".55" stroke-linecap="round"/>
+        <circle cx="470" cy="612" r="10" fill="#87a860" stroke="#1b1220" stroke-width="4" opacity=".9"/>
+        <!-- warts -->
+        <circle cx="352" cy="586" r="10" fill="#7a9a54" stroke="#1b1220" stroke-width="4"/>
+        <circle cx="352" cy="586" r="2.6" fill="#4a6a30"/>
+        <circle cx="548" cy="600" r="8" fill="#7a9a54" stroke="#1b1220" stroke-width="4"/>
+        <path d="M352,576 C350,566 356,560 362,562" fill="none" stroke="#4a3a1a" stroke-width="3.4" stroke-linecap="round"/>
+        <!-- crooked grin -->
+        <path d="M356,634 C388,678 500,674 534,628 C530,666 494,690 444,690 C396,690 362,668 356,634 Z" fill="#2a0a12"/>
+        <path d="M356,634 C388,678 500,674 534,628 C526,660 486,678 444,676 C404,674 370,660 356,634 Z" fill="#8a2a3a"/>
+        <path d="M356,634 C388,678 500,674 534,628" fill="none" stroke="#1b1220" stroke-width="9" stroke-linecap="round"/>
+        <path d="M390,644 L412,646 L406,668 Z" fill="#fffef4" stroke="#1b1220" stroke-width="4.5" stroke-linejoin="round"/>
+        <path d="M472,646 L494,642 L498,664 Z" fill="#ffe066" stroke="#8d5a12" stroke-width="4.5" stroke-linejoin="round"/>
+        <!-- chin hairs -->
+        <path d="M430,690 L424,704 M446,692 L446,710 M462,690 L470,704" stroke="#8a3a12" stroke-width="4" stroke-linecap="round"/>
+      </g>
+      <path d="M450,366 C540,366 594,432 594,512 C594,600 538,672 450,672 C362,672 306,600 306,512 C306,432 360,366 450,366 Z" fill="none" stroke="#1b1220" stroke-width="14"/>
+      <path d="M450,372 C528,372 584,428 588,506" fill="none" stroke="url(#wx-key)" stroke-width="9" opacity=".75" stroke-linecap="round"/>
+      <path d="M588,566 C578,624 544,660 502,670" fill="none" stroke="url(#wx-rim)" stroke-width="8" opacity=".7" stroke-linecap="round"/>
+    </g>
+
+    <!-- ENORMOUS CROOKED HAT -->
+    <g>
+      <!-- brim -->
+      <path d="M450,412 C560,412 636,394 668,368 C700,342 692,306 662,292 C652,334 606,352 548,358 C512,362 478,362 450,362 C422,362 388,362 352,358 C294,352 248,334 238,292 C208,306 200,342 232,368 C264,394 340,412 450,412 Z" fill="url(#wx-hat)"/>
+      <g clip-path="url(#wx-clip-hat)">
+        <path d="M200,392 C266,410 344,420 450,420 C556,420 634,410 700,392 C692,404 660,412 620,418 C556,428 520,430 450,430 C380,430 344,428 280,418 C240,412 208,404 200,392 Z" fill="#6a3f8a" opacity=".7"/>
+        <ellipse cx="340" cy="386" rx="94" ry="22" fill="#c08ae0" opacity=".30" filter="url(#wx-b14)"/>
+        <ellipse cx="580" cy="396" rx="80" ry="20" fill="#120618" opacity=".45" filter="url(#wx-b14)"/>
+      </g>
+      <path d="M450,412 C560,412 636,394 668,368 C700,342 692,306 662,292 C652,334 606,352 548,358 C512,362 478,362 450,362 C422,362 388,362 352,358 C294,352 248,334 238,292 C208,306 200,342 232,368 C264,394 340,412 450,412 Z" fill="none" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M242,308 C254,336 288,354 336,362" fill="none" stroke="url(#wx-key)" stroke-width="8" opacity=".7" stroke-linecap="round"/>
+      <path d="M664,306 C656,336 620,356 574,364" fill="none" stroke="url(#wx-rim)" stroke-width="7" opacity=".45" stroke-linecap="round"/>
+
+      <!-- bent cone -->
+      <path d="M336,352 C348,290 362,232 348,182 C338,142 300,120 268,110 C288,142 300,176 302,214 C304,262 316,310 330,352 Z" fill="url(#wx-hat)" opacity="0"/>
+      <path d="M330,360 C330,300 312,252 288,216 C262,178 224,158 196,150 C214,186 222,224 226,266 C230,312 258,346 300,362 C312,364 322,364 330,360 Z" fill="url(#wx-hat)"/>
+      <path d="M300,362 C258,348 230,314 226,266 C222,224 214,186 196,150 C230,140 268,148 296,170 C292,206 296,246 312,282 C324,310 342,334 362,352 Z" fill="#3a1a4c" opacity=".55"/>
+      <path d="M330,360 C330,300 312,252 288,216 C262,178 224,158 196,150 C214,186 222,224 226,266 C230,312 258,346 300,362 C312,364 322,364 330,360 Z" fill="none" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M318,344 C310,290 292,248 268,214 C246,184 218,166 200,160" fill="none" stroke="url(#wx-key)" stroke-width="9" opacity=".6" stroke-linecap="round"/>
+      <!-- second bend / tip -->
+      <path d="M196,150 C164,126 132,110 92,110 C118,124 138,146 152,172 C170,200 194,208 214,198 C224,192 224,164 196,150 Z" fill="url(#wx-hat)"/>
+      <path d="M196,150 C164,126 132,110 92,110 C118,124 138,146 152,172 C170,200 194,208 214,198 C224,192 224,164 196,150 Z" fill="none" stroke="#1b1220" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M104,114 C128,124 148,146 164,172" fill="none" stroke="#a86ac0" stroke-width="7" opacity=".65" stroke-linecap="round"/>
+      <circle cx="112" cy="126" r="7" fill="#abff5c" opacity=".8" filter="url(#wx-glow)"/>
+      <!-- hat band + buckle -->
+      <path d="M318,352 C330,330 344,308 356,286 C378,300 400,312 420,320 C400,336 372,348 344,356 Z" fill="url(#wx-leather)"/>
+      <path d="M318,352 C330,330 344,308 356,286 C378,300 400,312 420,320 C400,336 372,348 344,356 Z" fill="none" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+      <rect x="352" y="310" width="34" height="28" rx="5" fill="url(#wx-acid)" stroke="#1b1220" stroke-width="7" transform="rotate(22 369 324)"/>
+      <!-- patches on hat -->
+      <g transform="translate(288 272) rotate(-42)">
+        <rect x="-30" y="-26" width="60" height="52" rx="6" fill="#8d5a2c" stroke="#1b1220" stroke-width="8"/>
+        <path d="M-22,-16 L-14,-16 M-22,-16 L-22,-8 M22,-16 L14,-16 M22,-16 L22,-8 M-22,16 L-14,16 M-22,16 L-22,8 M22,16 L14,16 M22,16 L22,8" stroke="#ffd08a" stroke-width="3.6" stroke-linecap="round" opacity=".85"/>
+      </g>
+      <path d="M272,240 C282,212 300,190 322,178" fill="none" stroke="#c08ae0" stroke-width="7" opacity=".4" stroke-linecap="round"/>
+      <!-- mushroom growing on brim -->
+      <g>
+        <path d="M596,344 C596,326 608,314 624,314 C640,314 652,326 652,344 C640,338 608,338 596,344 Z" fill="#c94f4f" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M620,344 L620,362" stroke="#1b1220" stroke-width="9" stroke-linecap="round"/>
+        <circle cx="614" cy="330" r="4.4" fill="#fff0d0"/>
+        <circle cx="636" cy="334" r="3.4" fill="#fff0d0"/>
+      </g>
+      <!-- dangling charm -->
+      <path d="M470,398 L470,438" stroke="#1b1220" stroke-width="4"/>
+      <path d="M462,438 L478,438 L482,462 L458,462 Z" fill="url(#wx-acid)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="466" cy="448" r="3.4" fill="#ffffff" opacity=".8"/>
+    </g>
+  </g>
+
+  <!-- FRONT MAGIC -->
+  <g>
+    <g filter="url(#wx-glow)" opacity=".85">
+      <circle cx="196" cy="620" r="5.4" fill="#e2ffad"/>
+      <circle cx="778" cy="600" r="4.8" fill="#e2ffad"/>
+      <circle cx="152" cy="840" r="4" fill="#abff5c"/>
+      <circle cx="812" cy="800" r="4" fill="#abff5c"/>
+      <circle cx="268" cy="524" r="3.4" fill="#ffffff"/>
+    </g>
+    <g filter="url(#wx-paintS)">
+      <circle cx="236" cy="900" r="5" fill="#abff5c" opacity=".5"/>
+      <circle cx="760" cy="910" r="4.4" fill="#abff5c" opacity=".45"/>
+      <path d="M196,940 C200,958 194,972 182,980" fill="none" stroke="#abff5c" stroke-width="6" opacity=".35" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- LIGHT WASH + TEXTURE -->
+  <g clip-path="url(#wx-clip-figure)">
+    <g style="mix-blend-mode:multiply" opacity=".26">
+      <ellipse cx="452" cy="1000" rx="290" ry="180" fill="#4a7a3a" opacity=".35" filter="url(#wx-b28)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".09">
+      <rect width="900" height="1200" filter="url(#wx-mottle)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".12">
+      <rect width="900" height="1200" filter="url(#wx-grain)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".10">
+      <rect width="900" height="1200" filter="url(#wx-canvas)"/>
+    </g>
+    <g style="mix-blend-mode:soft-light" opacity=".45">
+      <rect width="900" height="1200" fill="url(#wx-key)" opacity=".5"/>
+    </g>
+  </g>
+</svg>

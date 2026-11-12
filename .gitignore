@@ -1,0 +1,14 @@
+# Local QA / scratch artifacts
+_review/
+CursedBrigade/
+node_modules/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# The packaged demo ZIP is intentionally tracked for one-click download.

@@ -1,0 +1,486 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+  <title>wizard-moon</title>
+  <defs>
+    <radialGradient id="wm-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d8f4ff" stop-opacity=".50"/>
+      <stop offset=".34" stop-color="#74c8ff" stop-opacity=".30"/>
+      <stop offset=".64" stop-color="#4b6cf0" stop-opacity=".16"/>
+      <stop offset=".86" stop-color="#2a2a7a" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#1a1240" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wm-moondisc" cx="46%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#f2fbff" stop-opacity=".92"/>
+      <stop offset=".45" stop-color="#cfe8fb" stop-opacity=".62"/>
+      <stop offset=".78" stop-color="#9fc4ee" stop-opacity=".30"/>
+      <stop offset="1" stop-color="#7fa8d8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wm-robe" x1="16%" y1="0%" x2="88%" y2="100%">
+      <stop offset="0" stop-color="#31459c"/>
+      <stop offset=".24" stop-color="#22327c"/>
+      <stop offset=".56" stop-color="#16205a"/>
+      <stop offset=".82" stop-color="#0e163e"/>
+      <stop offset="1" stop-color="#080d28"/>
+    </linearGradient>
+    <linearGradient id="wm-robeDeep" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#1b2a6e"/>
+      <stop offset=".5" stop-color="#111a4a"/>
+      <stop offset="1" stop-color="#070b22"/>
+    </linearGradient>
+    <linearGradient id="wm-silver" x1="20%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".26" stop-color="#eaf8ff"/>
+      <stop offset=".58" stop-color="#c2ddf4"/>
+      <stop offset=".82" stop-color="#93b2d4"/>
+      <stop offset="1" stop-color="#6e8dad"/>
+    </linearGradient>
+    <linearGradient id="wm-silverCool" x1="80%" y1="0%" x2="18%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".3" stop-color="#dff2ff"/>
+      <stop offset=".62" stop-color="#a9c8e6"/>
+      <stop offset="1" stop-color="#6b86ac"/>
+    </linearGradient>
+    <radialGradient id="wm-face" cx="34%" cy="24%" r="78%">
+      <stop offset="0" stop-color="#e6ecff"/>
+      <stop offset=".28" stop-color="#c9d4f2"/>
+      <stop offset=".58" stop-color="#a2b0d8"/>
+      <stop offset=".82" stop-color="#7a86b4"/>
+      <stop offset="1" stop-color="#525c8c"/>
+    </radialGradient>
+    <linearGradient id="wm-diadem" x1="18%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0" stop-color="#4a63b4"/>
+      <stop offset=".26" stop-color="#2c3f8e"/>
+      <stop offset=".62" stop-color="#1a2668"/>
+      <stop offset=".86" stop-color="#111a48"/>
+      <stop offset="1" stop-color="#0a0f30"/>
+    </linearGradient>
+    <linearGradient id="wm-diademShine" x1="14%" y1="0%" x2="86%" y2="100%">
+      <stop offset="0" stop-color="#c9f8ff" stop-opacity=".9"/>
+      <stop offset=".34" stop-color="#74e4ff" stop-opacity=".35"/>
+      <stop offset=".7" stop-color="#b49bff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="wm-ice" x1="24%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".95"/>
+      <stop offset=".28" stop-color="#c9f8ff" stop-opacity=".9"/>
+      <stop offset=".62" stop-color="#74e4ff" stop-opacity=".8"/>
+      <stop offset=".86" stop-color="#3f9fe0" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#2a5fc0" stop-opacity=".6"/>
+    </linearGradient>
+    <radialGradient id="wm-eye" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".26" stop-color="#d8fbff"/>
+      <stop offset=".58" stop-color="#74e4ff"/>
+      <stop offset="1" stop-color="#2a7fe0" stop-opacity=".25"/>
+    </radialGradient>
+    <linearGradient id="wm-rim" x1="10%" y1="100%" x2="100%" y2="8%">
+      <stop offset=".28" stop-color="#b49bff" stop-opacity="0"/>
+      <stop offset=".56" stop-color="#b49bff" stop-opacity=".55"/>
+      <stop offset=".80" stop-color="#e0f4ff" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".95"/>
+    </linearGradient>
+    <linearGradient id="wm-key" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0" stop-color="#fff6e2" stop-opacity=".92"/>
+      <stop offset=".3" stop-color="#ffd9a0" stop-opacity=".5"/>
+      <stop offset=".66" stop-color="#ffb87a" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#ffa870" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="wm-shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#080d24" stop-opacity=".68"/>
+      <stop offset=".55" stop-color="#080d24" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#080d24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wm-shade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset=".26" stop-color="#050818" stop-opacity="0"/>
+      <stop offset=".66" stop-color="#050818" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#050818" stop-opacity=".46"/>
+    </linearGradient>
+    <linearGradient id="wm-veil" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0" stop-color="#0b1236" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0b1236" stop-opacity=".55"/>
+    </linearGradient>
+
+    <filter id="wm-paint" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022 0.03" numOctaves="3" seed="41" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wm-paintS" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.036" numOctaves="3" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="wm-b3" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="wm-b6" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="wm-b14" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="wm-b28" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="wm-glow" x="-140%" y="-140%" width="380%" height="380%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="wm-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="61"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="wm-canvas" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.42" numOctaves="2" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="wm-mottle" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.0055" numOctaves="3" seed="37"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+
+    <clipPath id="wm-clip-robe">
+      <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z"/>
+    </clipPath>
+    <clipPath id="wm-clip-head">
+      <path d="M450,272 C548,272 606,342 606,432 C606,528 546,604 450,604 C354,604 294,528 294,432 C294,342 352,272 450,272 Z"/>
+    </clipPath>
+    <clipPath id="wm-clip-mask">
+      <path d="M450,450 m-175,0 a175,175 0 1,0 350,0 a175,175 0 1,0 -350,0 Z"/>
+    </clipPath>
+    <clipPath id="wm-clip-figure">
+      <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z"/>
+      <path d="M450,272 C548,272 606,342 606,432 C606,528 546,604 450,604 C354,604 294,528 294,432 C294,342 352,272 450,272 Z"/>
+      <ellipse cx="250" cy="760" rx="66" ry="140" transform="rotate(-8 250 760)"/>
+      <ellipse cx="652" cy="760" rx="66" ry="140" transform="rotate(8 652 760)"/>
+    </clipPath>
+  </defs>
+
+  <!-- ATMOSPHERE -->
+  <g>
+    <ellipse cx="452" cy="520" rx="372" ry="392" fill="url(#wm-halo)"/>
+    <circle cx="452" cy="470" r="270" fill="url(#wm-moondisc)"/>
+    <g opacity=".35" filter="url(#wm-paintS)">
+      <circle cx="392" cy="408" r="34" fill="#a8c8e8" opacity=".5"/>
+      <circle cx="510" cy="356" r="22" fill="#a8c8e8" opacity=".4"/>
+      <circle cx="470" cy="470" r="40" fill="#a8c8e8" opacity=".3"/>
+      <circle cx="356" cy="500" r="18" fill="#a8c8e8" opacity=".35"/>
+      <circle cx="556" cy="452" r="26" fill="#a8c8e8" opacity=".28"/>
+    </g>
+    <ellipse cx="452" cy="470" rx="272" ry="272" fill="none" stroke="#d8f4ff" stroke-width="2" opacity=".35"/>
+    <ellipse cx="452" cy="470" rx="296" ry="296" fill="none" stroke="#74e4ff" stroke-width="1.4" opacity=".22"/>
+  </g>
+
+  <!-- BACK MAGIC : ice shards -->
+  <g opacity=".9">
+    <g filter="url(#wm-b28)" opacity=".6">
+      <ellipse cx="238" cy="640" rx="86" ry="150" fill="#4b8dff" transform="rotate(-14 238 640)"/>
+      <ellipse cx="668" cy="628" rx="80" ry="146" fill="#74e4ff" transform="rotate(12 668 628)"/>
+    </g>
+    <g filter="url(#wm-paintS)">
+      <path d="M196,606 L232,522 L258,604 L236,676 Z" fill="url(#wm-ice)" opacity=".85"/>
+      <path d="M214,700 L242,640 L262,704 L240,748 Z" fill="url(#wm-ice)" opacity=".7"/>
+      <path d="M672,560 L706,486 L730,566 L702,634 Z" fill="url(#wm-ice)" opacity=".8"/>
+      <path d="M660,660 L684,606 L704,664 L682,714 Z" fill="url(#wm-ice)" opacity=".65"/>
+      <path d="M300,520 L322,468 L342,522 L322,566 Z" fill="url(#wm-ice)" opacity=".5"/>
+      <path d="M612,500 L634,448 L654,502 L634,548 Z" fill="url(#wm-ice)" opacity=".45"/>
+    </g>
+    <g filter="url(#wm-paintS)">
+      <path d="M170,470 L186,432 L202,472 L186,504 Z" fill="#c9f8ff" opacity=".55"/>
+      <path d="M744,432 L760,396 L776,436 L760,468 Z" fill="#c9f8ff" opacity=".5"/>
+      <circle cx="188" cy="588" r="5" fill="#d8fbff" opacity=".8"/>
+      <circle cx="762" cy="600" r="5.5" fill="#d8fbff" opacity=".8"/>
+      <circle cx="150" cy="700" r="4" fill="#b6f2ff" opacity=".55"/>
+      <circle cx="792" cy="690" r="4.5" fill="#b6f2ff" opacity=".6"/>
+      <circle cx="270" cy="470" r="3.4" fill="#ffffff" opacity=".7"/>
+      <circle cx="640" cy="452" r="3.8" fill="#ffffff" opacity=".7"/>
+    </g>
+  </g>
+
+  <!-- CONTACT SHADOW -->
+  <ellipse cx="454" cy="1126" rx="270" ry="54" fill="url(#wm-shadow)"/>
+  <ellipse cx="454" cy="1118" rx="186" ry="30" fill="#050818" opacity=".32" filter="url(#wm-b14)"/>
+
+  <!-- FIGURE -->
+  <g filter="url(#wm-paint)">
+    <!-- shoes -->
+    <g>
+      <path d="M356,986 C324,998 306,1024 312,1050 C318,1076 352,1086 386,1078 C414,1070 428,1048 424,1022 C420,998 392,980 356,986 Z" fill="url(#wm-silverCool)"/>
+      <path d="M356,986 C324,998 306,1024 312,1050 C318,1076 352,1086 386,1078 C414,1070 428,1048 424,1022 C420,998 392,980 356,986 Z" fill="none" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M330,1006 C322,1026 326,1048 344,1060" fill="none" stroke="#ffffff" stroke-width="6" opacity=".6" stroke-linecap="round"/>
+      <path d="M560,986 C590,988 614,1004 612,1030 C610,1058 578,1074 546,1072 C516,1070 498,1052 498,1028 C498,1002 528,982 560,986 Z" fill="url(#wm-silver)"/>
+      <path d="M560,986 C590,988 614,1004 612,1030 C610,1058 578,1074 546,1072 C516,1070 498,1052 498,1028 C498,1002 528,982 560,986 Z" fill="none" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M574,1002 C588,1014 594,1032 588,1048" fill="none" stroke="#b49bff" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+    </g>
+
+    <!-- robe -->
+    <g>
+      <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z" fill="url(#wm-robe)"/>
+      <g clip-path="url(#wm-clip-robe)">
+        <!-- painted colour masses -->
+        <g filter="url(#wm-paintS)">
+          <path d="M310,668 C290,742 296,818 284,894 C312,820 330,744 346,676 Z" fill="#7fb6ff" opacity=".42"/>
+          <path d="M596,700 C606,780 600,860 614,928 C626,862 618,782 612,712 Z" fill="#b49bff" opacity=".20"/>
+          <path d="M604,700 C592,780 596,860 610,928 C584,862 570,782 576,712 Z" fill="#1a1a5e" opacity=".55"/>
+          <path d="M352,780 C392,812 448,822 502,808 C478,850 424,866 384,850 C356,838 348,808 352,780 Z" fill="#b49bff" opacity=".18"/>
+          <path d="M470,900 C512,916 556,916 596,904 C570,932 520,944 484,936 C468,932 466,914 470,900 Z" fill="#74e4ff" opacity=".16"/>
+          <!-- fold shapes -->
+          <path d="M392,660 C382,744 390,826 378,910 C368,826 366,742 372,662 Z" fill="#050818" opacity=".35"/>
+          <path d="M520,672 C534,752 530,832 542,900 C520,828 512,748 508,674 Z" fill="#050818" opacity=".30"/>
+          <path d="M318,930 C368,952 460,962 560,946 C520,968 400,976 318,930 Z" fill="#74e4ff" opacity=".12"/>
+        </g>
+        <!-- silver trim : scalloped hems -->
+        <path d="M282,940 C310,962 348,972 380,972 C412,972 436,958 452,944 C468,958 492,972 524,972 C556,972 594,962 618,940 C620,968 600,994 560,1004 C520,1014 470,1016 450,1016 C430,1016 380,1014 340,1004 C300,994 280,968 282,940 Z" fill="url(#wm-silver)" opacity=".92"/>
+        <path d="M282,940 C310,962 348,972 380,972 C412,972 436,958 452,944 C468,958 492,972 524,972 C556,972 594,962 618,940" fill="none" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M330,880 C368,902 452,910 540,898 C512,916 400,920 330,880 Z" fill="#b49bff" opacity=".22"/>
+        <!-- layered overskirt panels -->
+        <path d="M320,860 C300,900 292,930 292,956 C316,940 340,916 356,886 Z" fill="#1b2a6e" opacity=".8"/>
+        <path d="M580,860 C600,900 608,930 608,956 C584,940 560,916 544,886 Z" fill="#0e163e" opacity=".8"/>
+        <!-- center front panel -->
+        <path d="M418,632 C412,720 414,810 404,900 L496,900 C486,810 488,720 482,632 Z" fill="#0b1236" opacity=".55"/>
+        <path d="M418,632 C412,720 414,810 404,900" fill="none" stroke="#b49bff" stroke-width="4" opacity=".55"/>
+        <path d="M482,632 C488,720 486,810 496,900" fill="none" stroke="#74e4ff" stroke-width="4" opacity=".45"/>
+        <!-- star embroidery -->
+        <g fill="#eaf8ff" opacity=".75">
+          <path d="M436,720 l5,11 12,1 -9,9 2,12 -10,-6 -10,6 2,-12 -9,-9 12,-1 Z"/>
+          <path d="M470,806 l5,11 12,1 -9,9 2,12 -10,-6 -10,6 2,-12 -9,-9 12,-1 Z"/>
+          <path d="M356,812 l4,9 10,1 -7,7 2,10 -9,-5 -9,5 2,-10 -7,-7 10,-1 Z" opacity=".7"/>
+        </g>
+        <!-- shading + rim -->
+        <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z" fill="url(#wm-shade)"/>
+        <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z" fill="url(#wm-veil)"/>
+        <path d="M500,602 C562,618 596,656 604,710 C616,790 606,864 618,940 C622,978 600,1002 560,1014 L558,992 C590,978 596,956 592,928 C580,856 590,788 578,714 C568,662 540,634 500,622 Z" fill="#b49bff" opacity=".26" filter="url(#wm-b6)"/>
+        <path d="M600,716 C608,786 600,856 610,922" fill="none" stroke="#e0f4ff" stroke-width="5" opacity=".6" stroke-linecap="round"/>
+        <path d="M330,606 C300,624 288,660 282,702 C270,772 280,840 266,898" fill="none" stroke="#ffe9c0" stroke-width="7" opacity=".30" filter="url(#wm-b3)" stroke-linecap="round"/>
+      </g>
+      <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940 C274,986 308,1014 368,1018 L532,1018 C592,1014 626,986 618,940 C600,864 612,790 596,706 C582,636 528,602 450,600 Z" fill="none" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+      <path d="M450,600 C372,602 318,636 304,706 C288,790 300,864 282,940" fill="none" stroke="url(#wm-key)" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+      <path d="M450,600 C528,602 582,636 596,706 C612,790 600,864 618,940" fill="none" stroke="url(#wm-rim)" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+
+      <!-- belt / sash -->
+      <g>
+        <path d="M296,896 C352,918 548,918 604,896 L604,934 C548,956 352,956 296,934 Z" fill="#0b1236"/>
+        <path d="M296,896 C352,918 548,918 604,896" fill="none" stroke="#c2ddf4" stroke-width="5" opacity=".8"/>
+        <path d="M296,896 C352,918 548,918 604,896 L604,934 C548,956 352,956 296,934 Z" fill="none" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+        <path d="M424,896 L476,896 L488,916 L476,938 L424,938 L412,916 Z" fill="url(#wm-silver)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+        <path d="M450,900 C444,908 444,918 450,926 C456,918 456,908 450,900 Z" fill="#16205a"/>
+        <circle cx="432" cy="906" r="3" fill="#ffffff" opacity=".9"/>
+        <!-- hanging star tassels -->
+        <path d="M330,948 L330,984" stroke="#1b1220" stroke-width="4" stroke-linecap="round"/>
+        <path d="M330,992 l4,9 10,1 -7,7 2,10 -9,-5 -9,5 2,-10 -7,-7 10,-1 Z" fill="#eaf8ff" stroke="#1b1220" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M570,948 L570,976" stroke="#1b1220" stroke-width="4" stroke-linecap="round"/>
+        <path d="M570,984 l4,9 10,1 -7,7 2,10 -9,-5 -9,5 2,-10 -7,-7 10,-1 Z" fill="#eaf8ff" stroke="#1b1220" stroke-width="4" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- standing collar -->
+    <g>
+      <path d="M330,630 C300,600 292,552 306,510 C326,540 348,566 372,586 Z" fill="#16205a" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M330,612 C310,586 306,556 312,532" fill="none" stroke="#c2ddf4" stroke-width="5" opacity=".65" stroke-linecap="round"/>
+      <path d="M570,630 C600,600 608,552 594,510 C574,540 552,566 528,586 Z" fill="#0e163e" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M572,614 C592,588 596,556 590,534" fill="none" stroke="#b49bff" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+    </g>
+
+    <!-- sleeves (draped bells) -->
+    <g>
+      <path d="M330,636 C292,650 266,690 260,742 C254,796 262,846 252,890 C286,904 320,900 344,880 C334,844 330,800 336,760 C342,714 344,672 336,646 Z" fill="url(#wm-robeDeep)"/>
+      <path d="M330,636 C292,650 266,690 260,742 C254,796 262,846 252,890 C286,904 320,900 344,880 C334,844 330,800 336,760 C342,714 344,672 336,646 Z" fill="none" stroke="#1b1220" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M316,656 C294,690 286,736 290,780" fill="none" stroke="url(#wm-key)" stroke-width="8" opacity=".6" stroke-linecap="round"/>
+      <path d="M256,880 C278,892 306,892 330,880 C332,896 322,908 302,912 C282,916 262,904 256,880 Z" fill="url(#wm-silver)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M296,760 C284,800 282,840 288,876" fill="none" stroke="#74e4ff" stroke-width="5" opacity=".4" stroke-linecap="round"/>
+
+      <path d="M570,636 C608,650 634,690 640,742 C646,796 638,846 648,890 C614,904 580,900 556,880 C566,844 570,800 564,760 C558,714 556,672 564,646 Z" fill="url(#wm-robe)"/>
+      <path d="M570,636 C608,650 634,690 640,742 C646,796 638,846 648,890 C614,904 580,900 556,880 C566,844 570,800 564,760 C558,714 556,672 564,646 Z" fill="none" stroke="#1b1220" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M644,880 C622,892 594,892 570,880 C568,896 578,908 598,912 C618,916 638,904 644,880 Z" fill="url(#wm-silver)" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M640,720 C650,764 650,812 642,852" fill="none" stroke="url(#wm-rim)" stroke-width="6" opacity=".5" stroke-linecap="round"/>
+      <!-- fold shapes on sleeves -->
+      <path d="M300,700 C292,760 292,820 300,872" fill="none" stroke="#050818" stroke-width="16" opacity=".4" filter="url(#wm-b6)"/>
+      <path d="M600,700 C608,760 608,820 600,872" fill="none" stroke="#050818" stroke-width="16" opacity=".35" filter="url(#wm-b6)"/>
+    </g>
+
+    <!-- shoulder mantle -->
+    <g>
+      <path d="M450,588 C374,592 312,622 288,686 C328,676 362,690 384,718 C410,704 430,700 450,700 C470,700 490,704 516,718 C538,690 572,676 612,686 C588,622 526,592 450,588 Z" fill="#2c3f92"/>
+      <path d="M450,588 C374,592 312,622 288,686 C328,676 362,690 384,718 C410,704 430,700 450,700 C470,700 490,704 516,718 C538,690 572,676 612,686 C588,622 526,592 450,588 Z" fill="none" stroke="#1b1220" stroke-width="13" stroke-linejoin="round"/>
+      <path d="M288,686 C328,676 362,690 384,718 C410,704 430,700 450,700" fill="none" stroke="url(#wm-key)" stroke-width="8" opacity=".55" stroke-linecap="round"/>
+      <path d="M450,700 C470,700 490,704 516,718 C538,690 572,676 612,686" fill="none" stroke="url(#wm-rim)" stroke-width="7" opacity=".55" stroke-linecap="round"/>
+      <path d="M344,626 C382,610 420,604 450,604" fill="none" stroke="#eaf8ff" stroke-width="3.5" opacity=".35" stroke-linecap="round"/>
+      <!-- chest crescent brooch -->
+      <path d="M450,742 C472,742 490,756 496,776 C484,758 468,748 450,748 C432,748 416,758 404,776 C410,756 428,742 450,742 Z" fill="url(#wm-ice)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+      <circle cx="450" cy="770" r="3.4" fill="#ffffff" opacity=".9"/>
+    </g>
+
+    <!-- left arm : staff hand -->
+    <g>
+      <path d="M262,860 C250,884 252,904 268,916 C284,928 306,922 314,906 C320,892 314,872 302,858 Z" fill="url(#wm-silverCool)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M276,868 C284,880 286,896 280,908" fill="none" stroke="#ffffff" stroke-width="5" opacity=".6" stroke-linecap="round"/>
+      <!-- staff -->
+      <path d="M244,1084 L272,1088 L284,716 L258,710 Z" fill="url(#wm-silverCool)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+      <path d="M262,730 L256,1068" stroke="#ffffff" stroke-width="4.5" opacity=".5" stroke-linecap="round"/>
+      <g filter="url(#wm-glow)" opacity=".8">
+        <path d="M270,590 L306,644 L288,704 L252,704 L234,644 Z" fill="url(#wm-ice)"/>
+      </g>
+      <path d="M270,590 L306,644 L288,704 L252,704 L234,644 Z" fill="none" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M270,610 L292,646 L280,694" fill="none" stroke="#ffffff" stroke-width="4" opacity=".8" stroke-linecap="round"/>
+      <path d="M270,592 L270,702" stroke="#c9f8ff" stroke-width="2.4" opacity=".5"/>
+      <path d="M236,646 L304,646" stroke="#c9f8ff" stroke-width="2" opacity=".4"/>
+    </g>
+
+    <!-- right arm + ice crystal in palm -->
+    <g>
+      <path d="M636,700 C668,684 688,652 684,622 C680,598 652,592 638,610 C626,626 620,658 612,684 Z" fill="url(#wm-robe)" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M652,626 C664,610 682,610 690,622" fill="none" stroke="#e0f4ff" stroke-width="6" opacity=".55" stroke-linecap="round"/>
+      <!-- hand -->
+      <path d="M682,626 C700,610 718,616 720,632 C722,648 708,660 690,660 C674,660 664,644 668,630 Z" fill="url(#wm-silverCool)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M700,624 C708,620 716,624 716,632" fill="none" stroke="#ffffff" stroke-width="4.5" opacity=".7" stroke-linecap="round"/>
+      <!-- ice crystal above palm -->
+      <g filter="url(#wm-glow)" opacity=".9">
+        <path d="M712,470 L740,510 L726,566 L700,540 L696,496 Z" fill="url(#wm-ice)"/>
+      </g>
+      <path d="M712,470 L740,510 L726,566 L700,540 L696,496 Z" fill="none" stroke="#1b1220" stroke-width="6" stroke-linejoin="round" opacity=".7"/>
+      <path d="M712,486 L726,512 L718,548" fill="none" stroke="#ffffff" stroke-width="4" opacity=".75" stroke-linecap="round"/>
+      <g filter="url(#wm-glow)">
+        <circle cx="756" cy="440" r="5" fill="#d8fbff"/>
+        <circle cx="678" cy="452" r="4" fill="#c9f8ff"/>
+        <circle cx="736" cy="392" r="3.4" fill="#ffffff"/>
+      </g>
+    </g>
+
+    <!-- head -->
+    <g>
+      <!-- hood behind -->
+      <ellipse cx="450" cy="424" rx="166" ry="170" fill="#16205a"/>
+      <path d="M286,432 C278,502 288,552 312,590 L346,570 C326,532 316,480 320,434 Z" fill="#0e163e"/>
+      <path d="M614,432 C622,502 612,552 588,590 L554,570 C574,532 584,480 580,434 Z" fill="#080d24"/>
+      <path d="M450,258 C520,258 576,294 602,352 C566,322 514,306 450,306 C386,306 334,322 298,352 C324,294 380,258 450,258 Z" fill="#1b2a6e"/>
+      <!-- silver rim around face -->
+      <ellipse cx="450" cy="432" rx="152" ry="160" fill="url(#wm-silver)"/>
+      <!-- pale moon face -->
+      <ellipse cx="450" cy="432" rx="142" ry="150" fill="url(#wm-face)"/>
+      <g clip-path="url(#wm-clip-head)">
+        <ellipse cx="386" cy="372" rx="86" ry="60" fill="#ffffff" opacity=".75" filter="url(#wm-b28)"/>
+        <ellipse cx="540" cy="516" rx="96" ry="86" fill="#4a5c94" opacity=".55" filter="url(#wm-b28)"/>
+        <path d="M580,470 C588,530 566,578 520,600 C556,570 570,522 562,470 Z" fill="#3a4c86" opacity=".35"/>
+        <path d="M316,382 C332,336 372,306 420,296 C376,314 344,346 332,388 Z" fill="#ffffff" opacity=".55"/>
+        <ellipse cx="452" cy="566" rx="110" ry="50" fill="#7a8cbc" opacity=".40" filter="url(#wm-b14)"/>
+        <!-- moon craters / freckles -->
+        <g fill="#a8b8d4" opacity=".45">
+          <circle cx="356" cy="500" r="13"/>
+          <circle cx="374" cy="516" r="7"/>
+          <circle cx="540" cy="498" r="10"/>
+          <circle cx="524" cy="514" r="5.5"/>
+          <circle cx="410" cy="558" r="8"/>
+          <circle cx="486" cy="552" r="6"/>
+        </g>
+        <!-- soft cheek blush (cool violet) -->
+        <ellipse cx="356" cy="486" rx="34" ry="20" fill="#b49bff" opacity=".30" filter="url(#wm-b6)"/>
+        <ellipse cx="546" cy="488" rx="30" ry="18" fill="#74b0ff" opacity=".26" filter="url(#wm-b6)"/>
+        <!-- painted colour masses -->
+        <g filter="url(#wm-paintS)">
+          <path d="M330,360 C346,320 396,296 448,292 C392,308 354,340 342,382 Z" fill="#ffffff" opacity=".65"/>
+          <path d="M470,306 C522,314 560,342 574,384 C552,352 512,330 470,322 Z" fill="#ffe9c0" opacity=".30"/>
+        </g>
+      </g>
+      <!-- BRIGHT SILVER CRESCENT MASK (brow plate) -->
+      <g>
+        <path d="M450,438 m-156,0 a156,156 0 1,1 312,0 a156,156 0 1,1 -312,0 Z M450,514 m-132,0 a132,132 0 1,1 264,0 a132,132 0 1,1 -264,0 Z" fill="url(#wm-silver)" fill-rule="evenodd"/>
+        <path d="M450,438 m-156,0 a156,156 0 1,1 312,0 a156,156 0 1,1 -312,0 Z M450,514 m-132,0 a132,132 0 1,1 264,0 a132,132 0 1,1 -264,0 Z" fill="url(#wm-diademShine)" opacity=".45" fill-rule="evenodd"/>
+        <!-- inner shadow cast on the face -->
+        <path d="M450,514 m-132,0 a132,132 0 0,0 264,0" fill="none" stroke="#1a2450" stroke-width="22" opacity=".45" filter="url(#wm-b6)"/>
+        <!-- bright bevels -->
+        <path d="M450,438 m-156,0 a156,156 0 0,1 312,0" fill="none" stroke="#ffffff" stroke-width="9" opacity=".95" stroke-linecap="round"/>
+        <path d="M450,514 m-132,0 a132,132 0 0,0 264,0" fill="none" stroke="#eaf8ff" stroke-width="6" opacity=".9" stroke-linecap="round"/>
+        <!-- ink contours -->
+        <path d="M450,438 m-156,0 a156,156 0 1,1 312,0 a156,156 0 1,1 -312,0 Z M450,514 m-132,0 a132,132 0 1,1 264,0 a132,132 0 1,1 -264,0 Z" fill="none" stroke="#1b1220" stroke-width="11" stroke-linejoin="round" fill-rule="evenodd"/>
+        <!-- engraved moon-phase glyphs -->
+        <g fill="#2a3560" opacity=".75">
+          <path d="M330,470 C330,452 344,438 362,438 C350,446 344,458 344,470 C344,482 350,494 362,502 C344,502 330,488 330,470 Z"/>
+          <path d="M570,470 C570,452 556,438 538,438 C550,446 556,458 556,470 C556,482 550,494 538,502 C556,502 570,488 570,470 Z"/>
+        </g>
+        <g fill="none" stroke="#1b1220" stroke-width="3" opacity=".55">
+          <path d="M330,470 C330,452 344,438 362,438 C350,446 344,458 344,470 C344,482 350,494 362,502 C344,502 330,488 330,470 Z"/>
+          <path d="M570,470 C570,452 556,438 538,438 C550,446 556,458 556,470 C556,482 550,494 538,502 C556,502 570,488 570,470 Z"/>
+        </g>
+      </g>
+      <!-- moon-phase ornaments -->
+      <g>
+        <circle cx="352" cy="404" r="19" fill="url(#wm-silverCool)" stroke="#1b1220" stroke-width="7"/>
+        <circle cx="352" cy="404" r="9" fill="#1a2450"/>
+        <circle cx="450" cy="378" r="23" fill="url(#wm-silver)" stroke="#1b1220" stroke-width="7"/>
+        <path d="M450,356 C464,356 476,368 476,386 C462,376 450,376 436,382 C438,366 442,356 450,356 Z" fill="#74e4ff" opacity=".9"/>
+        <path d="M440,392 C448,398 456,398 462,394" fill="none" stroke="#ffffff" stroke-width="3" opacity=".8" stroke-linecap="round"/>
+        <circle cx="548" cy="404" r="19" fill="url(#wm-silverCool)" stroke="#1b1220" stroke-width="7"/>
+        <circle cx="548" cy="404" r="8" fill="#1a2450" opacity=".55"/>
+        <path d="M538,398 C542,392 550,390 556,394 C550,398 544,404 542,410 C538,408 536,402 538,398 Z" fill="#1a2450"/>
+      </g>      <!-- diadem shadow + glowing eyes beneath it -->
+      <path d="M450,490 m-145,0 a145,145 0 0,1 290,0" fill="none" stroke="#3a4a86" stroke-width="14" opacity=".45" filter="url(#wm-b6)"/>
+      <g filter="url(#wm-glow)">
+        <ellipse cx="386" cy="448" rx="52" ry="34" fill="#74e4ff" opacity=".55"/>
+        <ellipse cx="514" cy="448" rx="52" ry="34" fill="#74e4ff" opacity=".55"/>
+      </g>
+      <path d="M344,450 C356,428 394,422 414,436 C426,446 428,458 424,466 C410,478 374,482 354,472 C344,466 340,458 344,450 Z" fill="#0b1236" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M556,450 C544,428 506,422 486,436 C474,446 472,458 476,466 C490,478 526,482 546,472 C556,466 560,458 556,450 Z" fill="#0b1236" stroke="#1b1220" stroke-width="8" stroke-linejoin="round"/>
+      <ellipse cx="386" cy="450" rx="17" ry="14" fill="#c9f8ff"/>
+      <ellipse cx="514" cy="450" rx="17" ry="14" fill="#c9f8ff"/>
+      <ellipse cx="386" cy="450" rx="9" ry="12" fill="#74e4ff"/>
+      <ellipse cx="514" cy="450" rx="9" ry="12" fill="#74e4ff"/>
+      <ellipse cx="386" cy="450" rx="4" ry="9" fill="#ffffff"/>
+      <ellipse cx="514" cy="450" rx="4" ry="9" fill="#ffffff"/>
+      <ellipse cx="380" cy="442" rx="3" ry="4" fill="#ffffff" opacity=".9"/>
+      <ellipse cx="508" cy="442" rx="3" ry="4" fill="#ffffff" opacity=".9"/>      <!-- occult star freckles -->
+      <g fill="#b49bff" opacity=".75">
+        <circle cx="382" cy="512" r="3.4"/>
+        <circle cx="404" cy="530" r="2.4"/>
+        <circle cx="518" cy="512" r="3.4"/>
+        <circle cx="496" cy="532" r="2.4"/>
+      </g>      <!-- small nose hint + mouth -->
+      <path d="M450,522 C446,530 444,538 448,544" fill="none" stroke="#8fa2c4" stroke-width="5" opacity=".6" stroke-linecap="round"/>
+      <path d="M434,560 C442,566 458,566 466,560" fill="none" stroke="#8fa2c4" stroke-width="5" opacity=".55" stroke-linecap="round"/>
+      <!-- forehead crescent gem -->
+
+      <!-- hood trim + star pins -->
+      <path d="M300,368 C312,318 356,280 414,266" fill="none" stroke="url(#wm-silver)" stroke-width="7" opacity=".55" stroke-linecap="round"/>
+      <path d="M600,368 C588,318 544,280 486,266" fill="none" stroke="url(#wm-rim)" stroke-width="7" opacity=".65" stroke-linecap="round"/>
+      <g fill="#eaf8ff" opacity=".9">
+        <path d="M344,340 l4,9 10,1 -7,7 2,10 -9,-5 -9,5 2,-10 -7,-7 10,-1 Z"/>
+        <path d="M566,352 l3.4,7 8,1 -6,5 1,8 -6,-4 -6,4 1,-8 -6,-5 8,-1 Z"/>
+      </g>
+      <path d="M300,540 C286,584 286,632 300,672 C312,704 330,724 352,734 C334,700 326,662 328,624 C330,592 340,562 354,542 Z" fill="#1b2a6e" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M600,540 C614,584 614,632 600,672 C588,704 570,724 548,734 C566,700 574,662 572,624 C570,592 560,562 546,542 Z" fill="#16205a" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <!-- head ink contours -->
+      <ellipse cx="450" cy="424" rx="166" ry="170" fill="none" stroke="#1b1220" stroke-width="14"/>
+      <path d="M450,420 m-170,0 a170,170 0 1,1 340,0 a170,170 0 1,1 -340,0 Z M450,490 m-145,0 a145,145 0 1,1 290,0 a145,145 0 1,1 -290,0 Z" fill="none" stroke="#1b1220" stroke-width="10" stroke-linejoin="round" fill-rule="evenodd"/>
+      <path d="M300,432 C342,394 400,374 450,374 C500,374 558,394 600,432" fill="none" stroke="url(#wm-silver)" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+      <path d="M300,440 C308,472 336,496 378,506 C404,512 430,514 450,514 C470,514 496,512 522,506 C564,496 592,472 600,440" fill="none" stroke="url(#wm-silverCool)" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+      <!-- rim / key light -->
+      <path d="M340,288 C384,268 420,262 450,262" fill="none" stroke="url(#wm-key)" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+      <path d="M584,300 C596,340 602,382 598,420" fill="none" stroke="url(#wm-rim)" stroke-width="8" stroke-linecap="round" opacity=".6"/>
+      <path d="M312,352 C300,394 298,436 306,470" fill="none" stroke="url(#wm-key)" stroke-width="7" stroke-linecap="round" opacity=".45"/>
+    </g>  </g>
+
+  <!-- FRONT MAGIC -->
+  <g>
+    <g filter="url(#wm-glow)" opacity=".8">
+      <circle cx="222" cy="560" r="5" fill="#d8fbff"/>
+      <circle cx="806" cy="540" r="4.5" fill="#d8fbff"/>
+      <circle cx="152" cy="800" r="4" fill="#b6f2ff"/>
+      <circle cx="826" cy="740" r="4" fill="#b6f2ff"/>
+      <circle cx="272" cy="452" r="3.4" fill="#ffffff"/>
+      <circle cx="700" cy="560" r="3" fill="#ffffff"/>
+    </g>
+    <g filter="url(#wm-paintS)">
+      <path d="M198,660 L206,640 L216,660 L208,678 Z" fill="#ffffff" opacity=".55"/>
+      <path d="M790,640 L798,620 L808,640 L800,658 Z" fill="#ffffff" opacity=".5"/>
+      <circle cx="240" cy="880" r="5" fill="#c9f8ff" opacity=".5"/>
+      <circle cx="780" cy="856" r="4.4" fill="#c9f8ff" opacity=".45"/>
+    </g>
+  </g>
+
+  <!-- LIGHT WASH + TEXTURE -->
+  <g clip-path="url(#wm-clip-figure)">
+    <g style="mix-blend-mode:multiply" opacity=".3">
+      <ellipse cx="452" cy="1010" rx="290" ry="180" fill="#7a4a9a" opacity=".4" filter="url(#wm-b28)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".09">
+      <rect width="900" height="1200" filter="url(#wm-mottle)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".12">
+      <rect width="900" height="1200" filter="url(#wm-grain)"/>
+    </g>
+    <g style="mix-blend-mode:overlay" opacity=".10">
+      <rect width="900" height="1200" filter="url(#wm-canvas)"/>
+    </g>
+    <g style="mix-blend-mode:soft-light" opacity=".5">
+      <rect x="0" y="0" width="900" height="1200" fill="url(#wm-key)" opacity=".5"/>
+    </g>
+  </g>
+</svg>

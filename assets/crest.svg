@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title>crest</title>
+  <defs>
+    <radialGradient id="cr-bg" cx="42%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#4a2470"/>
+      <stop offset=".42" stop-color="#2d1448"/>
+      <stop offset=".78" stop-color="#1b0e2c"/>
+      <stop offset="1" stop-color="#120a1c"/>
+    </radialGradient>
+    <linearGradient id="cr-gold" x1="16%" y1="0%" x2="86%" y2="100%">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset=".22" stop-color="#ffe066"/>
+      <stop offset=".5" stop-color="#ffc02e"/>
+      <stop offset=".76" stop-color="#d68a1c"/>
+      <stop offset="1" stop-color="#8a4f0e"/>
+    </linearGradient>
+    <linearGradient id="cr-silver" x1="20%" y1="0%" x2="84%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".3" stop-color="#eaf8ff"/>
+      <stop offset=".64" stop-color="#b9d4f0"/>
+      <stop offset="1" stop-color="#7a90b8"/>
+    </linearGradient>
+    <linearGradient id="cr-cyan" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".35" stop-color="#c9f8ff"/>
+      <stop offset=".72" stop-color="#74e4ff"/>
+      <stop offset="1" stop-color="#2a7fe0"/>
+    </linearGradient>
+    <linearGradient id="cr-violet" x1="16%" y1="0%" x2="84%" y2="100%">
+      <stop offset="0" stop-color="#e6c8ff"/>
+      <stop offset=".4" stop-color="#b45cff"/>
+      <stop offset="1" stop-color="#5a2a9a"/>
+    </linearGradient>
+    <filter id="cr-rough" x="-12%" y="-12%" width="124%" height="124%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="13" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="cr-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cr-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="61"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <!-- medallion -->
+  <g filter="url(#cr-rough)">
+    <circle cx="256" cy="256" r="236" fill="url(#cr-bg)" stroke="#1b1220" stroke-width="18"/>
+    <circle cx="256" cy="256" r="208" fill="none" stroke="url(#cr-gold)" stroke-width="7" opacity=".85"/>
+    <circle cx="256" cy="256" r="196" fill="none" stroke="url(#cr-gold)" stroke-width="3" opacity=".5" stroke-dasharray="14 12"/>
+    <!-- star rays behind -->
+    <g fill="url(#cr-gold)" opacity=".85">
+      <path d="M256,86 L270,150 L256,176 L242,150 Z"/>
+      <path d="M256,426 L242,362 L256,336 L270,362 Z"/>
+      <path d="M86,256 L150,242 L176,256 L150,270 Z"/>
+      <path d="M426,256 L362,270 L336,256 L362,242 Z"/>
+      <path d="M136,136 L182,182 L188,206 L164,200 Z" opacity=".7"/>
+      <path d="M376,136 L330,182 L324,206 L348,200 Z" opacity=".7"/>
+      <path d="M136,376 L182,330 L188,306 L164,312 Z" opacity=".7"/>
+      <path d="M376,376 L330,330 L324,306 L348,312 Z" opacity=".7"/>
+    </g>
+    <!-- crescent moon -->
+    <g>
+      <path d="M300,132 C232,150 186,208 186,278 C186,336 216,384 264,414 C200,406 148,354 148,286 C148,212 202,150 276,134 C284,132 292,132 300,132 Z" fill="url(#cr-silver)" stroke="#1b1220" stroke-width="12" stroke-linejoin="round"/>
+      <path d="M290,152 C234,170 200,216 200,276 C200,324 222,364 258,390" fill="none" stroke="#ffffff" stroke-width="7" opacity=".75" stroke-linecap="round"/>
+    </g>
+    <!-- crossed wand + short sword -->
+    <g>
+      <path d="M356,140 L374,152 L196,392 L180,380 Z" fill="url(#cr-violet)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M344,146 L196,378" stroke="#e6c8ff" stroke-width="5" opacity=".7" stroke-linecap="round"/>
+      <circle cx="372" cy="146" r="20" fill="url(#cr-cyan)" stroke="#1b1220" stroke-width="9"/>
+      <path d="M366,140 C370,134 378,134 382,140" stroke="#ffffff" stroke-width="4" opacity=".85" fill="none" stroke-linecap="round"/>
+      <path d="M160,150 L176,140 L358,352 L344,364 Z" fill="url(#cr-silver)" stroke="#1b1220" stroke-width="11" stroke-linejoin="round"/>
+      <path d="M170,148 L350,358" stroke="#ffffff" stroke-width="5" opacity=".65" stroke-linecap="round"/>
+      <path d="M342,336 L376,356 L364,376 L330,356 Z" fill="url(#cr-gold)" stroke="#1b1220" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M348,352 L364,364" stroke="#1b1220" stroke-width="5" opacity=".5" stroke-linecap="round"/>
+      <circle cx="166" cy="140" r="15" fill="url(#cr-gold)" stroke="#1b1220" stroke-width="8"/>
+    </g>
+    <!-- three stars -->
+    <g fill="url(#cr-cyan)" filter="url(#cr-glow)">
+      <path d="M256,196 l8,18 19,3 -14,14 4,19 -17,-10 -17,10 4,-19 -14,-14 19,-3 Z" opacity=".95"/>
+      <path d="M318,246 l6,13 14,2 -10,10 3,14 -13,-8 -13,8 3,-14 -10,-10 14,-2 Z" opacity=".85"/>
+      <path d="M214,326 l5,11 12,2 -9,9 3,12 -11,-7 -11,7 3,-12 -9,-9 12,-2 Z" opacity=".8"/>
+    </g>
+  </g>
+  <!-- texture -->
+  <circle cx="256" cy="256" r="236" fill="#ffffff" opacity="0" filter="url(#cr-grain)"/>
+  <g style="mix-blend-mode:overlay" opacity=".14" clip-path="url(#cr-clip)">
+    <rect width="512" height="512" filter="url(#cr-grain)"/>
+  </g>
+  <clipPath id="cr-clip"><circle cx="256" cy="256" r="238"/></clipPath>
+</svg>

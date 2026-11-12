@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>spell-necro</title>
+  <defs>
+    <radialGradient id="sn-core" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".22" stop-color="#e6ffd0"/>
+      <stop offset=".5" stop-color="#abff5c"/>
+      <stop offset=".78" stop-color="#4fc27a"/>
+      <stop offset="1" stop-color="#3a1f6a"/>
+    </radialGradient>
+    <linearGradient id="sn-swirl" x1="10%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0" stop-color="#c9f8ff"/>
+      <stop offset=".3" stop-color="#7ad8b0"/>
+      <stop offset=".62" stop-color="#8b5cf6"/>
+      <stop offset=".86" stop-color="#3a1f6a"/>
+      <stop offset="1" stop-color="#1b1220"/>
+    </linearGradient>
+    <filter id="sn-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="71" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sn-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#sn-glow)" opacity=".45">
+    <circle cx="64" cy="64" r="52" fill="#8b5cf6"/>
+  </g>
+  <g filter="url(#sn-rough)">
+    <!-- vortex arms -->
+    <path d="M64,64 C44,58 30,68 32,84 C34,100 54,106 68,98 C84,88 84,64 68,52 C52,40 28,44 18,62 C10,76 16,94 30,102 C18,96 12,80 18,66 C26,48 48,42 64,52 C78,60 78,80 66,88 C54,96 38,90 38,80 C38,70 48,64 60,68 Z" fill="url(#sn-swirl)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <!-- core -->
+    <circle cx="64" cy="64" r="18" fill="url(#sn-core)"/>
+    <circle cx="58" cy="58" r="6" fill="#ffffff" opacity=".9"/>
+    <path d="M58,64 C64,60 72,62 74,68" fill="none" stroke="#ffffff" stroke-width="3.4" opacity=".7" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#sn-glow)">
+    <path d="M108,34 C100,44 100,56 108,64 C98,58 90,46 94,34 C96,30 102,30 108,34 Z" fill="#c9f8ff" opacity=".8"/>
+    <path d="M20,84 C28,90 32,100 28,108 C20,102 14,92 16,84 C16,82 18,82 20,84 Z" fill="#abff5c" opacity=".7"/>
+    <circle cx="102" cy="96" r="4.4" fill="#e6ffd0" opacity=".8"/>
+    <circle cx="24" cy="32" r="3.6" fill="#c9f8ff" opacity=".8"/>
+  </g>
+</svg>

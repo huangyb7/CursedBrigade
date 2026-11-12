@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>spell-lightning</title>
+  <defs>
+    <linearGradient id="sk-bolt" x1="20%" y1="0%" x2="82%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".24" stop-color="#fffbd0"/>
+      <stop offset=".56" stop-color="#ffe14d"/>
+      <stop offset=".84" stop-color="#ffb100"/>
+      <stop offset="1" stop-color="#ff7a00"/>
+    </linearGradient>
+    <filter id="sk-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="53" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sk-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#sk-glow)" opacity=".6">
+    <path d="M70,4 L30,64 L56,64 L46,124 L98,50 L70,50 Z" fill="#ffe14d"/>
+  </g>
+  <g filter="url(#sk-rough)">
+    <!-- side bolts -->
+    <path d="M30,30 L14,66 L26,66 L20,100 L42,58 L30,58 Z" fill="url(#sk-bolt)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round" opacity=".92"/>
+    <path d="M98,30 L84,64 L96,64 L88,98 L110,54 L98,54 Z" fill="url(#sk-bolt)" stroke="#1b1220" stroke-width="6" stroke-linejoin="round" opacity=".92"/>
+    <!-- main bolt -->
+    <path d="M70,4 L30,64 L56,64 L46,124 L98,50 L70,50 Z" fill="url(#sk-bolt)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M66,20 L44,56 L58,56 L54,84" fill="none" stroke="#ffffff" stroke-width="5" opacity=".85" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M74,58 L86,58" stroke="#fffbd0" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffe14d">
+    <circle cx="112" cy="112" r="3.4"/>
+    <circle cx="18" cy="18" r="3"/>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <title>spell-acid</title>
+  <defs>
+    <radialGradient id="sa-splash" cx="40%" cy="32%" r="72%">
+      <stop offset="0" stop-color="#f6ffe0"/>
+      <stop offset=".28" stop-color="#e2ffad"/>
+      <stop offset=".6" stop-color="#abff5c"/>
+      <stop offset=".84" stop-color="#6ad02f"/>
+      <stop offset="1" stop-color="#2f7a24"/>
+    </radialGradient>
+    <filter id="sa-rough" x="-16%" y="-16%" width="132%" height="132%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="61" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="sa-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#sa-glow)" opacity=".5">
+    <ellipse cx="64" cy="86" rx="46" ry="30" fill="#abff5c"/>
+  </g>
+  <g filter="url(#sa-rough)">
+    <!-- splash crown -->
+    <path d="M64,68 C74,48 80,36 82,20 C88,34 86,50 78,66 C90,52 100,44 108,36 C104,54 92,68 78,76 C94,72 106,74 116,80 C100,88 84,88 70,84 C76,92 80,102 80,112 C68,104 60,92 58,80 C48,90 36,96 22,98 C30,86 42,78 54,74 C42,72 30,64 22,54 C38,58 52,64 62,72 Z" fill="url(#sa-splash)" stroke="#1b1220" stroke-width="7" stroke-linejoin="round"/>
+    <ellipse cx="52" cy="76" rx="9" ry="12" fill="#ffffff" opacity=".5" transform="rotate(-20 52 76)"/>
+    <circle cx="74" cy="74" r="6" fill="#f6ffe0" opacity=".7"/>
+    <circle cx="88" cy="82" r="4" fill="#e2ffad" opacity=".7"/>
+  </g>
+  <g fill="#c9ff8a" filter="url(#sa-glow)">
+    <circle cx="26" cy="30" r="7" opacity=".85"/>
+    <circle cx="44" cy="14" r="4.4" opacity=".8"/>
+    <circle cx="104" cy="22" r="5" opacity=".7"/>
+    <circle cx="112" cy="100" r="4" opacity=".7"/>
+    <circle cx="18" cy="112" r="5.4" opacity=".7"/>
+  </g>
+</svg>

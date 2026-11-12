@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <title>monster-eye</title>
+  <defs>
+    <radialGradient id="me-sclera" cx="38%" cy="30%" r="76%">
+      <stop offset="0" stop-color="#fffdf2"/>
+      <stop offset=".4" stop-color="#f2e8d4"/>
+      <stop offset=".74" stop-color="#d8c4a8"/>
+      <stop offset="1" stop-color="#a8907c"/>
+    </radialGradient>
+    <radialGradient id="me-iris" cx="42%" cy="38%" r="62%">
+      <stop offset="0" stop-color="#fff6c2"/>
+      <stop offset=".22" stop-color="#ffe14d"/>
+      <stop offset=".55" stop-color="#ff9a1a"/>
+      <stop offset=".8" stop-color="#d63a3a"/>
+      <stop offset="1" stop-color="#7a1530"/>
+    </radialGradient>
+    <radialGradient id="me-pupil" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000000"/>
+      <stop offset=".7" stop-color="#0a0616"/>
+      <stop offset="1" stop-color="#2a1030"/>
+    </radialGradient>
+    <radialGradient id="me-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff9a3d" stop-opacity=".45"/>
+      <stop offset=".5" stop-color="#f04b31" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#8a2050" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="me-tent" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#4a2a6a"/>
+      <stop offset=".55" stop-color="#2a1640"/>
+      <stop offset="1" stop-color="#120a1c"/>
+    </linearGradient>
+    <filter id="me-rough" x="-14%" y="-14%" width="128%" height="128%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="9" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="me-glowF" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur stdDeviation="18" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="me-b18" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="me-grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="61"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <circle cx="300" cy="290" r="240" fill="url(#me-glow)"/>
+
+  <g filter="url(#me-rough)">
+    <!-- tendrils -->
+    <path d="M212,470 C186,514 186,548 210,570 C196,542 202,514 224,494 Z" fill="url(#me-tent)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M300,486 C296,528 306,560 328,578 C312,552 310,524 320,500 Z" fill="url(#me-tent)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M388,470 C414,514 414,548 390,570 C404,542 398,514 376,494 Z" fill="url(#me-tent)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M142,392 C108,414 90,446 96,476 C102,452 120,430 148,418 Z" fill="url(#me-tent)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+    <path d="M458,392 C492,414 510,446 504,476 C498,452 480,430 452,418 Z" fill="url(#me-tent)" stroke="#1b1220" stroke-width="10" stroke-linejoin="round"/>
+
+    <!-- eyelid / dark socket -->
+    <path d="M300,132 C404,132 486,208 486,300 C486,392 408,462 300,462 C192,462 114,392 114,300 C114,208 196,132 300,132 Z" fill="#1a1030" stroke="#1b1220" stroke-width="13"/>
+
+    <!-- eyeball -->
+    <circle cx="300" cy="292" r="150" fill="url(#me-sclera)"/>
+    <circle cx="300" cy="292" r="150" fill="none" stroke="#1b1220" stroke-width="11"/>
+    <!-- veins -->
+    <g fill="none" stroke="#c94f5f" stroke-width="6" opacity=".55" stroke-linecap="round">
+      <path d="M186,232 C214,244 232,264 240,288"/>
+      <path d="M414,236 C388,248 370,268 362,290"/>
+      <path d="M206,356 C228,344 244,328 250,310"/>
+      <path d="M400,362 C376,352 360,336 354,318"/>
+      <path d="M232,180 C252,202 264,224 268,248"/>
+      <path d="M372,182 C352,204 340,226 336,250"/>
+    </g>
+    <!-- iris -->
+    <circle cx="300" cy="292" r="92" fill="url(#me-iris)"/>
+    <circle cx="300" cy="292" r="92" fill="none" stroke="#7a1530" stroke-width="7"/>
+    <g fill="none" stroke="#ffe14d" stroke-width="4" opacity=".55">
+      <circle cx="300" cy="292" r="76" stroke-dasharray="18 22"/>
+      <circle cx="300" cy="292" r="58" stroke-dasharray="10 26"/>
+    </g>
+    <!-- pupil -->
+    <ellipse cx="300" cy="292" rx="34" ry="44" fill="url(#me-pupil)"/>
+    <ellipse cx="300" cy="292" rx="34" ry="44" fill="none" stroke="#000000" stroke-width="4"/>
+    <!-- highlights -->
+    <ellipse cx="276" cy="262" rx="18" ry="14" fill="#ffffff" opacity=".85" transform="rotate(-20 276 262)"/>
+    <ellipse cx="326" cy="326" rx="10" ry="7" fill="#ffffff" opacity=".5" transform="rotate(-16 326 326)"/>
+    <!-- iris radial glow -->
+    <circle cx="300" cy="292" r="92" fill="none" stroke="#ffb143" stroke-width="6" opacity=".5" filter="url(#me-glowF)"/>
+
+    <!-- heavy brow -->
+    <path d="M148,246 C206,196 286,180 356,196 C416,210 458,244 476,286 C446,240 396,212 340,204 C276,196 206,212 164,252 Z" fill="#120a1c" opacity=".85"/>
+    <path d="M148,246 C206,196 286,180 356,196 C416,210 458,244 476,286" fill="none" stroke="#1b1220" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- rim light -->
+    <path d="M420,180 C466,222 490,270 488,326 C484,392 430,448 366,462" fill="none" stroke="#74e4ff" stroke-width="8" opacity=".5" stroke-linecap="round"/>
+    <path d="M180,178 C136,220 112,268 114,324 C118,388 168,442 228,458" fill="none" stroke="#ffd9a0" stroke-width="7" opacity=".35" stroke-linecap="round"/>
+  </g>
+
+  <!-- sparks -->
+  <g filter="url(#me-glowF)" opacity=".8">
+    <circle cx="112" cy="196" r="5.4" fill="#ff9a3d"/>
+    <circle cx="498" cy="212" r="4.6" fill="#ffe14d"/>
+    <circle cx="86" cy="330" r="4" fill="#ff9a3d"/>
+    <circle cx="528" cy="342" r="4.4" fill="#c9f8ff"/>
+  </g>
+
+  <ellipse cx="300" cy="556" rx="170" ry="34" fill="#ff9a3d" opacity=".12" filter="url(#me-b18)"/>
+
+  <g clip-path="url(#me-clip)" style="mix-blend-mode:overlay" opacity=".12">
+    <rect width="600" height="600" filter="url(#me-grain)"/>
+  </g>
+  <clipPath id="me-clip"><circle cx="300" cy="292" r="150"/></clipPath>
+</svg>

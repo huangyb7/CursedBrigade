@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#140f24">
+<meta name="description" content="咒语旅团 THE SPELL BRIGADE — 肉鸽合作元素弹幕 H5 游戏演示">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="咒语旅团">
+<meta name="format-detection" content="telephone=no">
+<title>咒语旅团 · THE SPELL BRIGADE</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1220'/%3E%3Cpath d='M32 10a22 22 0 1 0 0 44 18 18 0 1 1 0-44z' fill='%23ffd166'/%3E%3Cpath d='M44 20l2 6 6 2-6 2-2 6-2-6-6-2 6-2z' fill='%23fff4d8'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-screen="loading">
+
+<noscript>
+  <div style="position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:28px;background:#140f24;color:#fff4d8;font-family:'Microsoft YaHei',sans-serif;text-align:center">
+    <div style="max-width:320px;padding:26px;border:2px solid #ffd166;border-radius:22px;background:#1b1220;box-shadow:0 18px 50px rgba(0,0,0,.5)">
+      <div style="font-size:28px;margin-bottom:10px">🌙</div>
+      <strong style="font-size:20px;color:#ffd166">需要开启 JavaScript</strong>
+      <p style="font-size:14px;line-height:1.8;color:#e8d9bb;margin-top:10px">《咒语旅团》是一个交互式 H5 游戏，请在浏览器设置中允许 JavaScript 后刷新页面。</p>
+    </div>
+  </div>
+</noscript>
+
+<!-- ===== ICON SPRITE (inline, no network) ===== -->
+<svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8.4 4.9 19.6 12 8.4 19.1z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M14.8 5 7.8 12l7 7"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9.4 5 7 7-7 7"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9.2" cy="8" r="3.3"/><path d="M3.4 19.2c.5-3.2 2.7-5.1 5.8-5.1s5.3 1.9 5.8 5.1"/><path d="M16.2 5.4a3.1 3.1 0 0 1 0 5.8"/><path d="M17.4 14.4c2 .6 3.2 2.3 3.5 4.5"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.4 2.2 5 13.5h4.7L9.6 21.8l8.5-11.9h-4.8z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.1"/><path d="M12 3.1v2.2M12 18.7v2.2M20.9 12h-2.2M5.3 12H3.1M18.3 5.7l-1.6 1.6M7.3 16.7l-1.6 1.6M18.3 18.3l-1.6-1.6M7.3 7.3 5.7 5.7"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.4h3.3L12.2 5.4v13.2L7.3 14.6H4z"/><path d="M15.4 8.6a5 5 0 0 1 0 6.8"/><path d="M18 6.1a8.6 8.6 0 0 1 0 11.8"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.4h3.3L12.2 5.4v13.2L7.3 14.6H4z"/><path d="m16.2 9.2 5.2 5.6M21.4 9.2l-5.2 5.6"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6.6" y="4.8" width="3.7" height="14.4" rx="1.5" fill="currentColor" stroke="none"/><rect x="13.7" y="4.8" width="3.7" height="14.4" rx="1.5" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.6" y="8.6" width="11" height="11" rx="2.6"/><path d="M15.4 8.6V5.4a2 2 0 0 0-2-2H5.4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3.2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="17.6" cy="5.8" r="2.5"/><circle cx="17.6" cy="18.2" r="2.5"/><path d="m8.3 10.8 7.1-3.7M8.3 13.2l7.1 3.7"/></symbol>
+    <symbol id="i-sword" viewBox="0 0 24 24"><path d="M19.8 3.6h-3.9l-9 9v3.1h3.2l9.7-9.6z"/><path d="m6.9 17.5-3.3 3.3M8.6 15.9l-2.1-2.1M16.6 6.6l1.9 1.9"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.4 19 6v5.5c0 4.3-2.9 7.4-7 9-4.1-1.6-7-4.7-7-9V6z"/><path d="m9.1 11.9 2.1 2.1 3.8-4.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.3"/><path d="M12 7.2V12l3.3 2"/></symbol>
+    <symbol id="i-skull" viewBox="0 0 24 24"><path d="M12 3.4c4.4 0 7.1 2.9 7.1 6.7 0 2.3-1 3.6-2.3 4.5v2.7c0 1.6-1.3 2.7-2.9 2.7h-3.8c-1.6 0-2.9-1.1-2.9-2.7v-2.7C6 13.7 4.9 12.4 4.9 10.1 4.9 6.3 7.6 3.4 12 3.4z"/><circle cx="9.2" cy="10.2" r="1.4" fill="currentColor" stroke="none"/><circle cx="14.8" cy="10.2" r="1.4" fill="currentColor" stroke="none"/><path d="M10.8 17.4v3.2M13.2 17.4v3.2"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.5 2.5 5.4 5.9.7-4.4 4 1.2 5.8L12 16.5l-5.2 2.9 1.2-5.8-4.4-4 5.9-.7z"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3.6 18.4h16.8M4.7 7.1 8 12.2l4-6.3 4 6.3 3.3-5.1-1.5 8.5H6.2z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11.2 3 13 8.8l5.8 1.8L13 12.4 11.2 18.2 9.4 12.4 3.6 10.6 9.4 8.8z"/><path d="m18.6 15.6.7 2.4 2.4.7-2.4.7-.7 2.4-.7-2.4-2.4-.7 2.4-.7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4.4h8v3.3a4 4 0 0 1-8 0z"/><path d="M8 5.5H4.7v1.7a3.4 3.4 0 0 0 3.3 3.4M16 5.5h3.3v1.7a3.4 3.4 0 0 1-3.3 3.4"/><path d="M12 11.8v4.3M8.4 20.6c0-2.3 1.4-3.7 3.6-3.7s3.6 1.4 3.6 3.7"/></symbol>
+    <symbol id="i-restart" viewBox="0 0 24 24"><path d="M4.7 12a7.3 7.3 0 1 0 2.4-5.4"/><path d="M4.3 4.6v4.2h4.2"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3.8 11 8.2-6.7L20.2 11"/><path d="M6.2 9.6V19h11.6V9.6"/><path d="M10 19v-4.5h4V19"/></symbol>
+    <symbol id="i-scroll" viewBox="0 0 24 24"><path d="M6 4.4h10.6A2.4 2.4 0 0 1 19 6.8v11.8H8.4A2.4 2.4 0 0 1 6 16.2z"/><path d="M9 8.4h6M9 12h6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6.2 6.2 11.6 11.6M17.8 6.2 6.2 17.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.6 12.6 4.7 4.7L19.5 6.7"/></symbol>
+    <symbol id="i-wand" viewBox="0 0 24 24"><path d="M3.4 20.6 15.2 8.8"/><path d="M14.4 3.2l1 2.7 2.7 1-2.7 1-1 2.7-1-2.7-2.7-1 2.7-1z"/><path d="m19.3 13.4.7 1.9 1.9.7-1.9.7-.7 1.9-.7-1.9-1.9-.7 1.9-.7z"/></symbol>
+    <symbol id="i-dash" viewBox="0 0 24 24"><path d="M3.2 8h9.6M3.2 12h11.4M3.2 16h7.4"/><path d="m14.4 8.2 4 3.8-4 3.8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.2S4.8 15.6 4.8 10.6a4.2 4.2 0 0 1 7.2-2.9 4.2 4.2 0 0 1 7.2 2.9c0 5-7.2 9.6-7.2 9.6z"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.4"/><path d="M12 10.8v5.3M12 7.7v.2"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 17.6V5.8l9.4-1.9v11.8"/><circle cx="6.5" cy="17.7" r="2.6"/><circle cx="15.9" cy="15.8" r="2.6"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12.2 3.2c.5 2.9-1.4 3.9-2.4 5.5-.9 1.5-.7 2.9.4 3.8.1-1.8 1.4-2.7 2.5-3.7.2 2 1.9 2.6 2.7 4 1 1.6.5 3.6-1.1 4.5 3.1-.2 5.3-2.6 4.7-5.6-.5-2.9-2.8-4.7-4.5-6.5-.7-.8-1.4-1.4-1.8-2z"/><path d="M9 15.4c-1 1.3-1.2 2.8-.2 4 1.2 1.4 3.6 1.5 5 .4"/></symbol>
+    <symbol id="i-snow" viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5 4.2 16.5"/><path d="m9.2 5.1 2.8 2.3 2.8-2.3M9.2 18.9l2.8-2.3 2.8 2.3"/></symbol>
+    <symbol id="i-acid" viewBox="0 0 24 24"><path d="M9.2 3.4h5.6v5.3l3.5 6.2a3 3 0 0 1-2.6 4.5H8.3a3 3 0 0 1-2.6-4.5l3.5-6.2z"/><path d="M8.1 14.8h7.8"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.8"/><circle cx="12" cy="12" r="3.2"/><path d="M12 1.8v3M12 19.2v3M1.8 12h3M19.2 12h3"/></symbol>
+  </defs>
+</svg>
+
+<div class="desk-deco" aria-hidden="true">
+  <div class="desk-glow desk-glow--a"></div>
+  <div class="desk-glow desk-glow--b"></div>
+  <div class="desk-rune desk-rune--a"></div>
+  <div class="desk-rune desk-rune--b"></div>
+  <div class="desk-stars"></div>
+  <span class="desk-caption desk-caption--l">ROGUELITE CO-OP<i>VOL. 07</i></span>
+  <span class="desk-caption desk-caption--r">THE SPELL BRIGADE<i>H5 DEMO</i></span>
+</div>
+
+<div id="app">
+  <div class="frame-ornament frame-ornament--tl" aria-hidden="true"></div>
+  <div class="frame-ornament frame-ornament--br" aria-hidden="true"></div>
+
+  <!-- ============ LOADING ============ -->
+  <section class="screen screen--loading is-active" id="screen-loading" aria-label="加载中">
+    <div class="loading-bg" aria-hidden="true">
+      <div class="loading-aura"></div>
+      <div class="loading-mist loading-mist--a"></div>
+      <div class="loading-mist loading-mist--b"></div>
+    </div>
+    <div class="loading-inner">
+      <div class="loading-sigil" aria-hidden="true">
+        <div class="sigil-ring sigil-ring--outer"></div>
+        <div class="sigil-ring sigil-ring--mid"></div>
+        <div class="sigil-ticks"></div>
+        <span class="sigil-rune" style="--a:-90deg">✦</span>
+        <span class="sigil-rune" style="--a:-30deg">☾</span>
+        <span class="sigil-rune" style="--a:30deg">✧</span>
+        <span class="sigil-rune" style="--a:90deg">❖</span>
+        <span class="sigil-rune" style="--a:150deg">✦</span>
+        <span class="sigil-rune" style="--a:210deg">✶</span>
+        <div class="medallion medallion--loading">
+          <span class="medallion-inner">
+            <span class="art-swap">
+              <span class="art-fallback art-fallback--crest" aria-hidden="true">
+                <svg viewBox="0 0 240 240">
+                  <defs><linearGradient id="crestGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".5" stop-color="#ffd166"/><stop offset="1" stop-color="#ff9f43"/></linearGradient></defs>
+                  <circle cx="120" cy="120" r="88" fill="none" stroke="url(#crestGold)" stroke-width="4" stroke-dasharray="1.5 11" opacity=".9"/>
+                  <circle cx="120" cy="120" r="70" fill="none" stroke="#ffd166" stroke-width="1.6" opacity=".4"/>
+                  <path d="M146 62a58 58 0 1 0 0 116 46 46 0 1 1 0-116z" fill="#1b1220" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+                  <path d="M146 62a58 58 0 1 0 0 116 46 46 0 1 1 0-116z" fill="url(#crestGold)"/>
+                  <path d="m163 66 6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="#fff4d8"/>
+                  <path d="m83 145 4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#74e4ff"/>
+                  <circle cx="188" cy="151" r="5" fill="#ffd166"/>
+                </svg>
+              </span>
+              <img src="assets/crest.svg" alt="" onload="this.parentNode.classList.add('has-art')" onerror="this.style.display='none'">
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="loading-logo">
+        <h1 class="wordmark wordmark--loading" aria-label="咒语旅团">
+          <svg viewBox="0 0 420 118" role="img" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="wmGoldLoad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fff9e2"/><stop offset=".38" stop-color="#ffd166"/>
+                <stop offset=".7" stop-color="#ffc14d"/><stop offset="1" stop-color="#ff9f43"/>
+              </linearGradient>
+            </defs>
+            <text x="210" y="93" text-anchor="middle" font-family="ZCOOL KuaiLe, 'Microsoft YaHei', sans-serif"
+              font-size="94" letter-spacing="2" fill="url(#wmGoldLoad)" stroke="#1b1220" stroke-width="7"
+              paint-order="stroke fill" stroke-linejoin="round">咒语旅团</text>
+          </svg>
+        </h1>
+        <p class="wordmark-en wordmark-en--loading">THE SPELL BRIGADE</p>
+      </div>
+      <div class="loading-progress">
+        <div class="loading-track"><i id="loading-fill"></i><span class="loading-track-glow"></span></div>
+        <div class="loading-meta">
+          <span id="loading-line">正在点亮旅团篝火…</span>
+          <span id="loading-pct">0%</span>
+        </div>
+      </div>
+      <p class="loading-foot">THE FORGOTTEN CLOISTER · VOL. 07</p>
+    </div>
+    <div class="loading-grain" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ HOME ============ -->
+  <section class="screen screen--home" id="screen-home" aria-label="首页">
+    <div class="home-art" aria-hidden="true">
+      <div class="hero-fallback">
+        <div class="hf-sky"></div>
+        <div class="hf-moon"></div>
+        <div class="hf-rings"><i></i><i></i><i></i></div>
+        <div class="hf-hills hf-hills--back"></div>
+        <div class="hf-hills hf-hills--mid"></div>
+        <div class="hf-hills hf-hills--front"></div>
+        <div class="hf-wizards" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="hf-fog"></div>
+      </div>
+      <img class="hero-art" src="assets/hero-scene.svg" alt="" onerror="this.style.display='none'">
+      <div class="home-scrim home-scrim--top"></div>
+      <div class="home-scrim home-scrim--bottom"></div>
+      <div class="home-vignette"></div>
+      <div class="home-grain"></div>
+    </div>
+    <div class="home-fx" id="home-fx" aria-hidden="true"></div>
+    <div class="home-critter home-critter--eye" aria-hidden="true">
+      <img src="assets/monster-eye.svg" alt="" onerror="this.style.display='none';this.parentNode.style.display='none'">
+    </div>
+    <div class="home-critter home-critter--imp" aria-hidden="true">
+      <img src="assets/monster-imp.svg" alt="" onerror="this.style.display='none';this.parentNode.style.display='none'">
+    </div>
+    <div class="home-protect" aria-hidden="true"></div>
+
+    <div class="home-ui">
+      <header class="home-top">
+        <div class="home-era">
+          <span class="era-seal">07</span>
+          <span class="era-text"><b>失落纪元</b><i>THE LOST ERA</i></span>
+        </div>
+        <div class="home-tools">
+          <button class="icon-btn icon-btn--dark" id="btn-home-sound" aria-label="声音开关">
+            <svg class="ico" id="home-sound-ico"><use href="#i-sound"/></svg>
+          </button>
+          <button class="icon-btn icon-btn--dark" id="btn-home-settings" aria-label="设置">
+            <svg class="ico"><use href="#i-gear"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="home-logo">
+        <div class="medallion medallion--home" aria-hidden="true">
+          <span class="medallion-inner">
+            <span class="art-swap">
+              <span class="art-fallback art-fallback--crest">
+                <svg viewBox="0 0 240 240">
+                  <defs><linearGradient id="crestGold2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".5" stop-color="#ffd166"/><stop offset="1" stop-color="#ff9f43"/></linearGradient></defs>
+                  <circle cx="120" cy="120" r="88" fill="none" stroke="url(#crestGold2)" stroke-width="4" stroke-dasharray="1.5 11" opacity=".9"/>
+                  <circle cx="120" cy="120" r="70" fill="none" stroke="#ffd166" stroke-width="1.6" opacity=".4"/>
+                  <path d="M146 62a58 58 0 1 0 0 116 46 46 0 1 1 0-116z" fill="#1b1220" stroke="#1b1220" stroke-width="14" stroke-linejoin="round"/>
+                  <path d="M146 62a58 58 0 1 0 0 116 46 46 0 1 1 0-116z" fill="url(#crestGold2)"/>
+                  <path d="m163 66 6 16 16 6-16 6-6 16-6-16-16-6 16-6z" fill="#fff4d8"/>
+                  <path d="m83 145 4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#74e4ff"/>
+                  <circle cx="188" cy="151" r="5" fill="#ffd166"/>
+                </svg>
+              </span>
+              <img src="assets/crest.svg" alt="" onload="this.parentNode.classList.add('has-art')" onerror="this.style.display='none'">
+            </span>
+          </span>
+        </div>
+        <p class="home-kicker"><span>✦</span> ROGUELITE CO-OP · 4 WIZARDS <span>✦</span></p>
+        <h1 class="wordmark wordmark--home" aria-label="咒语旅团">
+          <svg viewBox="0 0 420 118" role="img" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="wmGoldHome" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fffbe9"/><stop offset=".34" stop-color="#ffd166"/>
+                <stop offset=".66" stop-color="#ffc14d"/><stop offset=".9" stop-color="#ff9f43"/>
+                <stop offset="1" stop-color="#ffb02e"/>
+              </linearGradient>
+              <linearGradient id="wmSheenHome" x1="0" y1="0" x2="1" y2=".4">
+                <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+                <stop offset=".46" stop-color="#ffffff" stop-opacity=".65"/>
+                <stop offset=".54" stop-color="#ffffff" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <text x="210" y="93" text-anchor="middle" font-family="ZCOOL KuaiLe, 'Microsoft YaHei', sans-serif"
+              font-size="94" letter-spacing="2" fill="url(#wmGoldHome)" stroke="#1b1220" stroke-width="7"
+              paint-order="stroke fill" stroke-linejoin="round">咒语旅团</text>
+            <text class="wm-sheen" x="210" y="93" text-anchor="middle" font-family="ZCOOL KuaiLe, 'Microsoft YaHei', sans-serif"
+              font-size="94" letter-spacing="2" fill="url(#wmSheenHome)" aria-hidden="true">咒语旅团</text>
+          </svg>
+        </h1>
+        <div class="logo-rule" aria-hidden="true"><i></i><span>❖</span><i></i></div>
+        <p class="wordmark-en wordmark-en--home">THE SPELL BRIGADE</p>
+        <p class="logo-sub">暗黑童话 · 元素弹幕 · 四人小队</p>
+      </div>
+
+      <div class="home-bottom">
+        <div class="home-copy">
+          <p class="home-tagline"><span>别怕，</span><b>队友比怪物更疯。</b></p>
+          <p class="home-desc">在黎明之前，把笑声、月光、雷火和酸雾，统统砸向那群不请自来的家伙。</p>
+        </div>
+        <ul class="home-chips" id="home-chips">
+          <li class="chip"><svg class="ico"><use href="#i-users"/></svg>4 人小队</li>
+          <li class="chip"><svg class="ico"><use href="#i-bolt"/></svg>元素弹幕</li>
+          <li class="chip"><svg class="ico"><use href="#i-sparkle"/></svg>肉鸽升级</li>
+        </ul>
+        <div class="home-ctas">
+          <button class="btn btn--primary btn--hero" id="btn-start" data-sound="ui-confirm">
+            <span class="btn-ico-badge"><svg class="ico"><use href="#i-play"/></svg></span>
+            <span class="btn-label">开始冒险<small>START THE RITUAL</small></span>
+            <span class="btn-shine" aria-hidden="true"></span>
+          </button>
+          <button class="btn btn--ghost btn--hero2" id="btn-party" data-sound="ui-confirm">
+            <svg class="ico"><use href="#i-users"/></svg><span>小队集结</span>
+          </button>
+        </div>
+        <div class="home-legal">
+          <span class="legal-dot" aria-hidden="true"></span>
+          <span>H5 演示版 · 3 位 AI 巫师自动补位</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROSTER ============ -->
+  <section class="screen screen--roster" id="screen-roster" aria-label="选择巫师">
+    <div class="screen-bg screen-bg--roster" aria-hidden="true">
+      <div class="bg-runes"></div>
+      <div class="bg-glow bg-glow--roster"></div>
+      <div class="bg-grain"></div>
+    </div>
+    <header class="sub-header">
+      <button class="icon-btn icon-btn--cream" id="btn-roster-back" data-nav="home" aria-label="返回">
+        <svg class="ico"><use href="#i-back"/></svg>
+      </button>
+      <div class="sub-header-title">
+        <span class="eyebrow">CHOOSE YOUR WIZARD</span>
+        <h2>选择你的巫师</h2>
+      </div>
+      <div class="roster-count" aria-hidden="true"><b id="roster-index">01</b><span>/ 04</span></div>
+    </header>
+    <div class="roster-viewport">
+      <div class="roster-track" id="roster-track" tabindex="0" aria-label="巫师列表，左右滑动选择"></div>
+      <button class="roster-arrow roster-arrow--prev" id="roster-prev" aria-label="上一位巫师">
+        <svg class="ico"><use href="#i-back"/></svg>
+      </button>
+      <button class="roster-arrow roster-arrow--next" id="roster-next" aria-label="下一位巫师">
+        <svg class="ico"><use href="#i-chev"/></svg>
+      </button>
+      <div class="roster-grain" aria-hidden="true"></div>
+    </div>
+    <footer class="roster-footer">
+      <div class="roster-dots" id="roster-dots" role="tablist" aria-label="巫师选择"></div>
+      <p class="roster-hint"><span>‹</span> 左右滑动 · 挑选你的疯子 <span>›</span></p>
+      <button class="btn btn--primary btn--wide" id="btn-confirm-wizard" data-sound="ui-confirm">
+        <svg class="ico"><use href="#i-wand"/></svg><span>确认巫师</span><i class="btn-tag" id="confirm-wizard-name">笑面小丑</i>
+      </button>
+    </footer>
+  </section>
+
+  <!-- ============ LOBBY ============ -->
+  <section class="screen screen--lobby" id="screen-lobby" aria-label="大厅">
+    <div class="screen-bg screen-bg--lobby" aria-hidden="true">
+      <div class="bg-runes"></div>
+      <div class="bg-glow bg-glow--lobby"></div>
+      <div class="bg-grain"></div>
+    </div>
+    <header class="sub-header">
+      <button class="icon-btn icon-btn--cream" id="btn-lobby-back" data-nav="roster" aria-label="返回">
+        <svg class="ico"><use href="#i-back"/></svg>
+      </button>
+      <div class="sub-header-title">
+        <span class="eyebrow">THE BRIGADE ASSEMBLES</span>
+        <h2>小队集结</h2>
+      </div>
+      <div class="lobby-emblem" aria-hidden="true">✦</div>
+    </header>
+
+    <div class="lobby-scroll" id="lobby-scroll">
+      <p class="lobby-sub">篝火还亮着。把你的疯子们叫齐。</p>
+
+      <div class="room-card">
+        <div class="room-left">
+          <span class="room-label">房间码 <i>ROOM CODE</i></span>
+          <span class="room-code" id="room-code">SPB-0000</span>
+        </div>
+        <div class="room-actions">
+          <button class="btn btn--small btn--cream" id="btn-copy-invite">
+            <svg class="ico"><use href="#i-copy"/></svg><span>复制邀请</span>
+          </button>
+          <button class="icon-btn icon-btn--cream icon-btn--sm" id="btn-open-share" aria-label="分享海报">
+            <svg class="ico"><use href="#i-share"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="section-head"><span>小队席位</span><i></i><small id="lobby-party-count">4 / 4 · AI 自动补位</small></div>
+      <div class="party-slots" id="lobby-slots"></div>
+
+      <div class="section-head"><span>选择今夜难度</span><i></i><small id="diff-en">ECLIPSE</small></div>
+      <div class="diff-grid" id="diff-grid"></div>
+      <p class="diff-desc" id="diff-desc">标准的旅团试炼。撑过 150 秒，别让篝火熄灭。</p>
+
+      <div class="campfire-note">
+        <span class="campfire-fire" aria-hidden="true"><svg class="ico"><use href="#i-flame"/></svg></span>
+        <div class="campfire-copy">
+          <span>篝火旁的低语 <i>WHISPERS BY THE FIRE</i></span>
+          <p id="lobby-tip">拖动左侧摇杆移动，巫师会自动施法。</p>
+        </div>
+        <span class="campfire-spark" aria-hidden="true">✦</span>
+      </div>
+      <div class="lobby-extra" aria-hidden="true">
+        <i></i><span>把房间码发给朋友 · 本次会话内有效 · 无需网络</span><i></i>
+      </div>
+    </div>
+
+    <footer class="lobby-foot">
+      <button class="btn btn--primary btn--wide" id="btn-enter" data-sound="ui-confirm">
+        <span class="btn-ico-badge"><svg class="ico"><use href="#i-bolt"/></svg></span>
+        <span class="btn-label">踏入遗迹<small>ENTER THE RUINS</small></span>
+        <span class="btn-shine" aria-hidden="true"></span>
+      </button>
+      <p class="lobby-note">撑过 150 秒，等待黎明 · 无需网络</p>
+    </footer>
+  </section>
+
+  <!-- ============ GAME ============ -->
+  <section class="screen screen--game" id="screen-game" aria-label="战斗">
+    <div id="battle-stage">
+      <canvas id="game-canvas" width="390" height="844"></canvas>
+      <div class="stage-fallback" id="stage-fallback" aria-hidden="true">
+        <div class="sf-sky"></div>
+        <div class="sf-moon"></div>
+        <div class="sf-tree sf-tree--a"></div>
+        <div class="sf-tree sf-tree--b"></div>
+        <div class="sf-ruins"></div>
+        <div class="sf-floor"></div>
+        <div class="sf-fog"></div>
+        <div class="sf-orb sf-orb--a"></div><div class="sf-orb sf-orb--b"></div><div class="sf-orb sf-orb--c"></div>
+      </div>
+      <div class="lowhp-vignette" id="lowhp-vignette" aria-hidden="true"></div>
+      <div class="stage-vignette" aria-hidden="true"></div>
+      <div class="stage-grain" aria-hidden="true"></div>
+    </div>
+
+    <div class="hud" id="game-hud">
+      <div class="hud-safe">
+        <div class="hud-top">
+          <button class="hud-pause" id="btn-pause" aria-label="暂停">
+            <svg class="ico"><use href="#i-pause"/></svg>
+          </button>
+          <div class="hud-stage">
+            <span class="hud-stage-en" id="hud-stage-en">THE FORGOTTEN CLOISTER</span>
+            <span class="hud-stage-name" id="hud-stage-name">遗忘回廊</span>
+          </div>
+          <div class="hud-run">
+            <div class="hud-clock">
+              <span class="hud-clock-label" id="hud-clock-label">黎明倒计时</span>
+              <b id="hud-time">02:30</b>
+            </div>
+            <div class="hud-wave">
+              <span class="hud-wave-label"><i>WAVE</i><b id="hud-wave-num">1/5</b></span>
+              <span class="hud-wave-name" id="hud-wave">第一夜</span>
+            </div>
+            <div class="hud-kills">
+              <span class="hud-kills-label">击杀</span>
+              <b id="hud-kills">0</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="boss-bar is-hidden" id="boss-bar">
+          <div class="boss-head">
+            <span class="boss-skull"><svg class="ico"><use href="#i-skull"/></svg></span>
+            <b id="boss-name">梦魇领主</b>
+            <span class="boss-tag">BOSS</span>
+          </div>
+          <div class="boss-track"><i id="boss-fill"></i><span class="boss-glint"></span></div>
+        </div>
+
+        <div class="hud-vitals">
+          <div class="level-badge"><span>Lv.</span><b id="hud-level">1</b></div>
+          <div class="vital-bars">
+            <div class="hp-bar hp-bar--player">
+              <i id="hud-hp-fill"></i>
+              <span class="hp-gloss"></span>
+              <span id="hud-hp-text" class="hp-text">100 / 100</span>
+            </div>
+            <div class="xp-bar"><i id="hud-xp-fill"></i><span class="xp-label">XP</span></div>
+          </div>
+        </div>
+
+        <div class="hud-party" id="hud-party" aria-label="小队状态"></div>
+      </div>
+
+      <div class="hud-bottom">
+        <div class="joystick-wrap" id="joystick-wrap">
+          <div id="joystick-zone">
+            <div class="joystick-base" aria-hidden="true"><i class="joystick-rune"></i></div>
+            <div id="joystick-knob"><span class="knob-core"></span></div>
+          </div>
+          <span class="joystick-caption">MOVE</span>
+        </div>
+        <div class="spell-bar" id="hud-spells" aria-label="当前法术"></div>
+        <div class="dash-wrap">
+          <button id="btn-dash" class="dash-btn" aria-label="冲刺">
+            <svg class="dash-ring" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="dash-ring-bg" cx="50" cy="50" r="45"></circle>
+              <circle class="dash-ring-fill" id="dash-ring-fill" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <span class="dash-inner">
+              <svg class="ico dash-ico"><use href="#i-dash"/></svg>
+              <span id="dash-cooldown">冲刺</span>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="tutorial-hint" id="tutorial-hint">
+        <span class="tut-icon"><svg class="ico"><use href="#i-wand"/></svg></span>
+        <span class="tut-text">左侧拖动移动 · 自动施法 · 冲刺躲避</span>
+        <button class="tut-close" id="tut-close" aria-label="关闭提示">×</button>
+      </div>
+
+      <div class="boss-banner" id="boss-banner" aria-hidden="true">
+        <span class="bb-ribbon"></span>
+        <span class="bb-text"><i>THE NIGHTMARE AWAKENS</i><b>梦 魇 领 主</b></span>
+        <span class="bb-ribbon"></span>
+      </div>
+
+      <div class="low-hp-flash" aria-hidden="true"></div>
+    </div>
+
+    <div class="engine-veil is-hidden" id="engine-veil">
+      <div class="veil-panel">
+        <div class="veil-sigil" aria-hidden="true"><i></i><i></i><span>✦</span></div>
+        <h3 id="veil-title">正在唤醒魔法…</h3>
+        <p id="veil-text">旅团的法杖正在赶来，请稍等片刻。</p>
+        <button class="btn btn--ghost btn--small" id="btn-veil-back" hidden>返回大厅</button>
+      </div>
+    </div>
+
+    <div class="game-top-fx" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ RESULT ============ -->
+  <section class="screen screen--result" id="screen-result" aria-label="结算">
+    <div class="result-bg" aria-hidden="true">
+      <img class="result-art" src="assets/hero-scene.svg" alt="" onerror="this.style.display='none'">
+      <div class="result-scrim"></div>
+      <div class="result-rays"></div>
+      <div class="result-runes"></div>
+      <div class="bg-grain"></div>
+    </div>
+    <div class="result-ambient" aria-hidden="true">
+      <div class="ra-glow"></div>
+      <div class="ra-ring ra-ring--a"></div>
+      <div class="ra-ring ra-ring--b"></div>
+      <div class="ra-runes"><span>✦</span><span>✧</span><span>☾</span><span>✧</span><span>✦</span></div>
+      <div class="ra-embers" id="result-embers"></div>
+      <div class="ra-fog"></div>
+    </div>
+    <div class="result-scroll">
+      <header class="result-head">
+        <span class="eyebrow" id="result-eyebrow">THE RUN IS OVER</span>
+        <h2 class="result-title" id="result-title">黎明，来了</h2>
+        <p class="result-sub" id="result-sub">你们把整座遗迹的笑声都吵醒了。</p>
+      </header>
+
+      <div class="result-main">
+        <div class="grade-seal" id="grade-seal">
+          <div class="grade-rays" aria-hidden="true"></div>
+          <div class="grade-inner">
+            <span class="grade-label">GRADE</span>
+            <b id="result-grade">S</b>
+            <span class="grade-for" id="result-grade-for">PERFECT RITUAL</span>
+          </div>
+        </div>
+        <div class="stat-grid" id="result-stats"></div>
+      </div>
+
+      <div class="result-party-wrap">
+        <div class="section-head section-head--result"><span>同行巫师</span><i></i><small id="result-difficulty">月蚀之夜</small></div>
+        <div class="result-party" id="result-party"></div>
+      </div>
+
+      <div class="result-quote">
+        <span class="rq-mark" aria-hidden="true">“</span>
+        <p id="result-quote-text">别眨眼——火烧起来的时候，才最好笑。</p>
+        <span class="rq-by" id="result-quote-by">— 笑面小丑</span>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn btn--primary btn--wide" id="btn-again" data-sound="ui-confirm">
+          <svg class="ico"><use href="#i-restart"/></svg><span>再战一次</span>
+        </button>
+        <div class="result-actions-row">
+          <button class="btn btn--ghost" id="btn-result-lobby"><svg class="ico"><use href="#i-home"/></svg><span>返回大厅</span></button>
+          <button class="btn btn--ghost" id="btn-result-share"><svg class="ico"><use href="#i-share"/></svg><span>分享战绩</span></button>
+        </div>
+      </div>
+      <p class="result-foot">咒语旅团 · THE SPELL BRIGADE · 演示版</p>
+    </div>
+  </section>
+
+  <!-- ============ MODALS ============ -->
+  <div class="modal-layer" id="modal-layer">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+
+    <!-- LEVEL UP -->
+    <div class="modal" id="modal-levelup" role="dialog" aria-modal="true" aria-labelledby="levelup-title">
+      <div class="modal-panel panel-levelup">
+        <span class="panel-corner panel-corner--tl" aria-hidden="true"></span>
+        <span class="panel-corner panel-corner--tr" aria-hidden="true"></span>
+        <span class="panel-corner panel-corner--bl" aria-hidden="true"></span>
+        <span class="panel-corner panel-corner--br" aria-hidden="true"></span>
+        <div class="levelup-sparks" id="levelup-sparks" aria-hidden="true"></div>
+        <header class="levelup-head">
+          <span class="eyebrow eyebrow--gold"><svg class="ico"><use href="#i-sparkle"/></svg> SPELL RESONANCE</span>
+          <h2 class="modal-title" id="levelup-title">法术共鸣</h2>
+          <p class="modal-sub">选择一项强化，继续今夜的狂欢</p>
+          <span class="levelup-level" id="levelup-level">LEVEL 2</span>
+        </header>
+        <div class="upgrade-grid" id="upgrade-grid"></div>
+        <div class="levelup-foot">
+          <span class="kbd-hint"><b>1</b><b>2</b><b>3</b><span>快速选择</span></span>
+          <span class="levelup-rule" aria-hidden="true"></span>
+          <span class="levelup-wish">✦ 愿魔法站在你这边 ✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAUSE -->
+    <div class="modal" id="modal-pause" role="dialog" aria-modal="true" aria-labelledby="pause-title">
+      <div class="modal-panel panel-pause">
+        <header class="modal-head">
+          <span class="eyebrow">THE BRIGADE WAITS</span>
+          <h2 class="modal-title" id="pause-title">暂停</h2>
+          <p class="modal-sub">篝火尚温，怪物也在原地等你。</p>
+        </header>
+        <div class="pause-audio">
+          <button class="setting-row setting-row--compact" id="pause-music" role="switch" aria-checked="true">
+            <span class="setting-ico"><svg class="ico"><use href="#i-music"/></svg></span>
+            <span class="setting-label">音乐</span>
+            <span class="switch"><i></i></span>
+          </button>
+          <button class="setting-row setting-row--compact" id="pause-sfx" role="switch" aria-checked="true">
+            <span class="setting-ico"><svg class="ico"><use href="#i-sound"/></svg></span>
+            <span class="setting-label">音效</span>
+            <span class="switch"><i></i></span>
+          </button>
+        </div>
+        <div class="pause-actions">
+          <button class="btn btn--primary btn--wide" id="btn-pause-resume" data-sound="ui-confirm">
+            <svg class="ico"><use href="#i-play"/></svg><span>继续冒险</span>
+          </button>
+          <div class="pause-row">
+            <button class="btn btn--ghost btn--small" id="btn-pause-restart"><svg class="ico"><use href="#i-restart"/></svg><span>重新开始</span></button>
+            <button class="btn btn--ghost btn--small" id="btn-pause-lobby"><svg class="ico"><use href="#i-home"/></svg><span>返回大厅</span></button>
+          </div>
+        </div>
+        <p class="pause-tip"><span class="kbd">Esc</span> 继续冒险</p>
+      </div>
+    </div>
+
+    <!-- SHARE -->
+    <div class="modal" id="modal-share" role="dialog" aria-modal="true" aria-labelledby="share-title">
+      <div class="modal-panel panel-share">
+        <button class="icon-btn icon-btn--cream share-close" id="btn-share-close" aria-label="关闭">
+          <svg class="ico"><use href="#i-close"/></svg>
+        </button>
+        <h2 class="sr-only" id="share-title">分享战绩</h2>
+        <div class="share-poster-wrap">
+          <div class="poster" id="share-poster"></div>
+        </div>
+        <div class="share-actions">
+          <button class="btn btn--primary btn--wide" id="btn-share-copy">
+            <svg class="ico"><use href="#i-copy"/></svg><span>复制邀请文案</span>
+          </button>
+          <p class="share-hint" id="share-hint">战绩、房间码与话题标签会一起复制</p>
+          <div class="share-manual" id="share-manual" hidden>
+            <textarea id="share-manual-text" readonly aria-label="邀请文案"></textarea>
+            <p>自动复制失败，请长按/全选手动复制。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div class="modal" id="modal-settings" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+      <div class="modal-panel panel-settings">
+        <header class="modal-head modal-head--row">
+          <div>
+            <span class="eyebrow">OPTIONS &amp; LORE</span>
+            <h2 class="modal-title" id="settings-title">设置</h2>
+          </div>
+          <button class="icon-btn icon-btn--cream" id="btn-settings-x" aria-label="关闭设置">
+            <svg class="ico"><use href="#i-close"/></svg>
+          </button>
+        </header>
+        <div class="settings-scroll" id="settings-scroll">
+          <section class="settings-block">
+            <h3 class="settings-h"><svg class="ico"><use href="#i-music"/></svg>声音</h3>
+            <button class="setting-row" id="setting-music" role="switch" aria-checked="true">
+              <span class="setting-ico setting-ico--music"><svg class="ico"><use href="#i-music"/></svg></span>
+              <span class="setting-copy"><b>音乐</b><i>程序化生成的旅团小调</i></span>
+              <span class="switch"><i></i></span>
+            </button>
+            <button class="setting-row" id="setting-sfx" role="switch" aria-checked="true">
+              <span class="setting-ico setting-ico--sfx"><svg class="ico"><use href="#i-sound"/></svg></span>
+              <span class="setting-copy"><b>音效</b><i>火球、雷声与怪物的抱怨</i></span>
+              <span class="switch"><i></i></span>
+            </button>
+          </section>
+
+          <section class="settings-block">
+            <h3 class="settings-h"><svg class="ico"><use href="#i-scroll"/></svg>玩法说明</h3>
+            <div class="help-controls">
+              <div class="help-ctrl"><span class="help-key">拖动</span><b>左侧摇杆移动</b></div>
+              <div class="help-ctrl"><span class="help-key">自动</span><b>自动施法 · 自动瞄准</b></div>
+              <div class="help-ctrl"><span class="help-key">冲刺</span><b>穿过怪物，躲避伤害</b></div>
+              <div class="help-ctrl"><span class="help-key">升级</span><b>三选一法术共鸣</b></div>
+            </div>
+            <p class="help-goal"><svg class="ico"><use href="#i-target"/></svg>目标：撑过 150 秒，等待黎明。120 秒时梦魇领主苏醒。</p>
+            <ul class="help-tips" id="help-tips"></ul>
+          </section>
+
+          <section class="settings-block">
+            <h3 class="settings-h"><svg class="ico"><use href="#i-gear"/></svg>其他</h3>
+            <button class="btn btn--danger btn--wide btn--small" id="btn-reset">
+              <svg class="ico"><use href="#i-restart"/></svg><span id="reset-label">重置进度</span>
+            </button>
+            <p class="settings-note">会清空已选巫师、难度与声音设置，但不会删除任何战绩以外的东西。</p>
+            <div class="settings-version">v1.0.0 H5 DEMO · 非官方学习演示</div>
+          </section>
+        </div>
+        <footer class="settings-foot">
+          <button class="btn btn--primary btn--wide" id="btn-settings-close">回到冒险</button>
+        </footer>
+      </div>
+    </div>
+
+    <!-- MANUAL COPY -->
+    <div class="modal" id="modal-copy" role="dialog" aria-modal="true" aria-labelledby="copy-title">
+      <div class="modal-panel panel-copy">
+        <h2 class="modal-title" id="copy-title">手动复制</h2>
+        <p class="modal-sub">自动复制被浏览器拦下了，请长按或全选下面的文字。</p>
+        <textarea id="manual-copy-text" readonly aria-label="邀请文案"></textarea>
+        <button class="btn btn--primary btn--wide" id="btn-copy-done">好，我记住了</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-layer" id="toast-layer" aria-live="polite" aria-atomic="false"></div>
+  <div class="app-grain" aria-hidden="true"></div>
+  <div class="app-scanlines" aria-hidden="true"></div>
+</div>
+
+<footer class="desk-foot" aria-hidden="true">
+  <span>THE SPELL BRIGADE</span><i>✦</i><span>H5 DEMO</span>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/game.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

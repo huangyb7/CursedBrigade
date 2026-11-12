@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>favicon</title>
+  <defs>
+    <linearGradient id="fv-gold" x1="16%" y1="0%" x2="86%" y2="100%">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset=".3" stop-color="#ffe066"/>
+      <stop offset=".7" stop-color="#ffb100"/>
+      <stop offset="1" stop-color="#8a4f0e"/>
+    </linearGradient>
+    <linearGradient id="fv-silver" x1="20%" y1="0%" x2="84%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".4" stop-color="#eaf8ff"/>
+      <stop offset="1" stop-color="#8fb4d8"/>
+    </linearGradient>
+    <linearGradient id="fv-cyan" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".5" stop-color="#c9f8ff"/>
+      <stop offset="1" stop-color="#2a7fe0"/>
+    </linearGradient>
+    <radialGradient id="fv-bg" cx="42%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#4a2470"/>
+      <stop offset=".5" stop-color="#28123f"/>
+      <stop offset="1" stop-color="#120a1c"/>
+    </radialGradient>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="url(#fv-bg)" stroke="#1b1220" stroke-width="5"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="url(#fv-gold)" stroke-width="2.4"/>
+  <path d="M38,14 C28,17 21,25 21,34 C21,42 25,49 33,53 C24,52 16,45 16,35 C16,25 24,16 35,14 C36,14 37,14 38,14 Z" fill="url(#fv-silver)" stroke="#1b1220" stroke-width="3.4" stroke-linejoin="round"/>
+  <path d="M45,16 L48,18 L26,50 L23,48 Z" fill="url(#fv-cyan)" stroke="#1b1220" stroke-width="3"/>
+  <path d="M18,20 L22,17 L44,44 L41,47 Z" fill="url(#fv-silver)" stroke="#1b1220" stroke-width="3"/>
+  <path d="M32,24 l2,4.6 5,0.8 -3.6,3.6 0.9,5 -4.3,-2.5 -4.3,2.5 0.9,-5 -3.6,-3.6 5,-0.8 Z" fill="#ffffff"/>
+</svg>
